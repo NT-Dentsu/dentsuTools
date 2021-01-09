@@ -1,0 +1,36 @@
+body{
+    display: flex;
+    flex-direction: column;
+}
+.grovalNavigation{
+    height: 70px;
+    text-align: center;
+    background-color: #888;
+    color: #fff;
+}
+main{
+    min-height: 100vh;
+    display: flex;
+    margin-top: 10px;
+}
+.content{
+    flex: 1;
+    background-color: #eee;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.localNavigation{
+    width: 300px;
+    text-align: center;
+    background-color: #888;
+    color: #fff;
+}
+
+.alert {
+	padding: 15px;
+	border: 1px solid #d6e9c6;
+	border-radius: 4px;
+	color: #3c763d;
+	background-color: #dff0d8;
+}
