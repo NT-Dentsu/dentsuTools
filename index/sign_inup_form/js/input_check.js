@@ -2,7 +2,7 @@ $(function () {
     value_check();
     $('form').submit(function () {
         if ($('.is-invalid').length != 0) {
-            alert('半角英数字ハイフン，20文字以内で入力してください');
+            alert('半角英数字ハイフン，6文字以上20文字以内で入力してください');
             return false;
         }
     });
