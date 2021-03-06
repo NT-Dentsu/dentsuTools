@@ -1,0 +1,83 @@
+#wrapper {
+    position: relative;
+    max-width: 1980px;
+    margin: 0 auto;   /*全体の中央寄せ*/
+}
+#container {
+    width: 100%;
+    margin: 0 auto;   /*中央寄せ*/
+    position: relative;
+}
+
+
+/* 追加 */
+/* panelを正方形にする用 */
+.panel-wrap {
+    width: 25%;
+    padding-bottom: 25%;
+    margin: 0px;
+}
+
+.panel {
+    background-color: aqua;
+    /* padding内を塗りつぶし */
+    background-clip: content-box;
+    /* margin: 10px; */
+    padding: 0px;
+    margin: 0px;
+    /* border: 1px solid #eee; */
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.panel.s{
+    /* width: inherit; */
+    /* width: 320px; */
+    background-color: aquamarine;
+    padding: 10px 10px 10px 10px;
+}
+
+.panel.m{
+    background-color: coral;
+}
+.panel.m.left{
+    /* 記述した順に[上][右][下][左]のパディング */
+    padding: 10px 0px 10px 10px;
+}
+.panel.m.right{
+    /* 記述した順に[上][右][下][左]のパディング */
+    padding: 10px 10px 10px 0px;
+}
+.panel.m.top{
+    /* 記述した順に[上][右][下][左]のパディング */
+    padding: 10px 10px 0px 10px;
+}
+.panel.m.bottom{
+    /* 記述した順に[上][右][下][左]のパディング */
+    padding: 0px 10px 10px 10px;
+}
+
+.panel.l{
+    background-color: forestgreen;
+}
+.panel.l.leftTop{
+    /* 記述した順に[上][右][下][左]のパディング */
+    padding: 10px 0px 0px 10px;
+}
+.panel.l.rightTop{
+    /* 記述した順に[上][右][下][左]のパディング */
+    padding: 10px 10px 0px 0px;
+}
+.panel.l.leftBottom{
+    /* 記述した順に[上][右][下][左]のパディング */
+    padding: 0px 0px 10px 10px;
+}
+.panel.l.rightBottom{
+    /* 記述した順に[上][右][下][左]のパディング */
+    padding: 0px 10px 10px 0px;
+}
+
+.panel img {
+    width: 100%;
+}
