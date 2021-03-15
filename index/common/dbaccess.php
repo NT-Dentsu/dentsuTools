@@ -68,5 +68,47 @@ Class DBAccess{
             echo $ex->getMessage();
         }
     }
+
+    # 制作者:KARASU-2000
+    # 更新日:2021/3/15
+    # 機能:トランザクションを開始する
+    public function beginTransaction($pdo){
+        try{
+            # トランザクション開始
+            $pdo->beginTransaction();
+        }
+        catch(Exception $ex){
+            # エラーメッセージ表示
+            echo $ex->getMessage();
+        }
+    }
+
+    # 制作者:KARASU-2000
+    # 更新日:2021/3/15
+    # 機能:ロールバックを実行する
+    public function rollbackTransaction($pdo){
+        try{
+            # ロールバック実行
+            $pdo->rollBack();
+        }
+        catch(Exception $ex){
+            # エラーメッセージ表示
+            echo $ex->getMessage();
+        }
+    }
+
+    # 制作者:KARASU-2000
+    # 更新日:2021/3/15
+    # 機能:コミットを実行する
+    public function commitTransaction($pdo){
+        try{
+            # コミット実行
+            $pdo->commit();
+        }
+        catch(Exception $ex){
+            # エラーメッセージ表示
+            echo $ex->getMessage();
+        }
+    }
 }
  ?>
