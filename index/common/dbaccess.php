@@ -70,6 +70,36 @@ Class DBAccess{
     }
 
     # 制作者:KARASU-2000
+    # 更新日:2021/3/16
+    # 機能:受け取ったクエリに値をバインドして実行する
+    public function executePrepareSQL($pdo, $sql, $parameter){
+        try{
+            # SQLを準備する
+            $stmt = $pdo->prepare($sql);
+            # 値をバインドする
+            foreach($parameter as $key => $value){
+                if(is_int($value) == true){
+                    # 数値の場合
+                    $stmt->bindValue($key, $value, PDO::PARAM_INT);
+                }
+                else{
+                    # 文字列の場合
+                    $stmt->bindValue($key, $value, PDO::PARAM_STR);
+                }
+            }
+            # クエリ実行
+            $stmt->execute();
+
+            # 実行結果を返却
+            return $stmt;
+        }
+        catch(Exception $ex){
+            # エラーメッセージ表示
+            echo $ex->getMessage();
+        }
+    }
+
+    # 制作者:KARASU-2000
     # 更新日:2021/3/15
     # 機能:トランザクションを開始する
     public function beginTransaction($pdo){
