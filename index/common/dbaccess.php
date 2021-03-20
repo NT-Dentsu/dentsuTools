@@ -38,6 +38,20 @@ Class DBAccess{
     }
 
     # 制作者:KARASU-2000
+    # 更新日:2021/3/20
+    # 機能:DBから切断する
+    public function disconnectDB(&$pdo){
+        try{
+            # インスタンスを破棄
+            $pdo = null;
+        }
+        catch(Exception $ex){
+            # エラーメッセージ表示
+            echo $ex->getMessage();
+        }
+    }
+
+    # 制作者:KARASU-2000
     # 更新日:2021/3/12
     # 機能:受け取ったクエリを実行する(SELECT)
     public function getTableSQL($pdo, $sql){
