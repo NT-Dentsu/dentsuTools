@@ -1,6 +1,6 @@
 <?php
 # 制作者:KARASU-2000
-# 更新日:2021/3/12
+# 更新日:2021/3/24
 # 機能:DBアクセスクラス
 Class DBAccess{
     # 定数宣言
@@ -14,7 +14,7 @@ Class DBAccess{
     const PASSWORD = 'DentsuTool';
 
     # 制作者:KARASU-2000
-    # 更新日:2021/3/12
+    # 更新日:2021/3/24
     # 機能:DBアクセスの用のインスタンスを生成する
     public function connectDB(){
         try{
@@ -32,13 +32,13 @@ Class DBAccess{
             return $pdo;
         }
         catch(PDOException $ex){
-            # エラーメッセージ表示
-            echo $ex->getMessage();
+            # 例外をスロー
+            throw $ex;
         }
     }
 
     # 制作者:KARASU-2000
-    # 更新日:2021/3/20
+    # 更新日:2021/3/24
     # 機能:DBから切断する
     public function disconnectDB(&$pdo){
         try{
@@ -46,13 +46,13 @@ Class DBAccess{
             $pdo = null;
         }
         catch(Exception $ex){
-            # エラーメッセージ表示
-            echo $ex->getMessage();
+            # 例外をスロー
+            throw $ex;
         }
     }
 
     # 制作者:KARASU-2000
-    # 更新日:2021/3/12
+    # 更新日:2021/3/24
     # 機能:受け取ったクエリを実行する(SELECT)
     public function getTableSQL($pdo, $sql){
         try{
@@ -62,13 +62,13 @@ Class DBAccess{
             return $dataTable;
         }
         catch(Exception $ex){
-            # エラーメッセージ表示
-            echo $ex->getMessage();
+            # 例外をスロー
+            throw $ex;
         }
     }
 
     # 制作者:KARASU-2000
-    # 更新日:2021/3/12
+    # 更新日:2021/3/24
     # 機能:受け取ったクエリを実行する(INSERT, UPDATE, DELETE)
     public function executeSQL($pdo, $sql){
         try{
@@ -78,13 +78,13 @@ Class DBAccess{
             return $result;
         }
         catch(Exception $ex){
-            # エラーメッセージ表示
-            echo $ex->getMessage();
+            # 例外をスロー
+            throw $ex;
         }
     }
 
     # 制作者:KARASU-2000
-    # 更新日:2021/3/16
+    # 更新日:2021/3/24
     # 機能:受け取ったクエリに値をバインドして実行する
     public function executePrepareSQL($pdo, $sql, $parameter){
         try{
@@ -108,13 +108,13 @@ Class DBAccess{
             return $stmt;
         }
         catch(Exception $ex){
-            # エラーメッセージ表示
-            echo $ex->getMessage();
+            # 例外をスロー
+            throw $ex;
         }
     }
 
     # 制作者:KARASU-2000
-    # 更新日:2021/3/15
+    # 更新日:2021/3/24
     # 機能:トランザクションを開始する
     public function beginTransaction($pdo){
         try{
@@ -122,13 +122,13 @@ Class DBAccess{
             $pdo->beginTransaction();
         }
         catch(Exception $ex){
-            # エラーメッセージ表示
-            echo $ex->getMessage();
+            # 例外をスロー
+            throw $ex;
         }
     }
 
     # 制作者:KARASU-2000
-    # 更新日:2021/3/15
+    # 更新日:2021/3/24
     # 機能:ロールバックを実行する
     public function rollbackTransaction($pdo){
         try{
@@ -136,13 +136,13 @@ Class DBAccess{
             $pdo->rollBack();
         }
         catch(Exception $ex){
-            # エラーメッセージ表示
-            echo $ex->getMessage();
+            # 例外をスロー
+            throw $ex;
         }
     }
 
     # 制作者:KARASU-2000
-    # 更新日:2021/3/15
+    # 更新日:2021/3/24
     # 機能:コミットを実行する
     public function commitTransaction($pdo){
         try{
@@ -150,8 +150,8 @@ Class DBAccess{
             $pdo->commit();
         }
         catch(Exception $ex){
-            # エラーメッセージ表示
-            echo $ex->getMessage();
+            # 例外をスロー
+            throw $ex;
         }
     }
 }
