@@ -25,30 +25,33 @@
 
         // 照合一致:true, 照合不一致:falseを代入
         $result = false;
+        $massage = 'ユーザIDまたはパスワードが異なります';
         try {
             // SQL文を実行
             $stmt = $db->executePrepareSQL($pdo, $sql, $parameter);
+            // 1のとき照合成功，0のとき照合失敗
+            $count = $stmt->fetchColumn();
+            if ($count === 1) {
+                $result = true;
+                $massage = 'ログイン成功しました';
+            }
         } catch(Exception $ex){
             // すでに同じIDのユーザが存在したときの処理
             // echo $ex->getMessage();
             $result = false;
         }
 
-        // 1のとき照合成功，0のとき照合失敗
-        $count = $stmt->fetchColumn();
-        if ($count === 1) {
-            $result = true;
-        }
-
         // データベースから切断
         $db->disconnectDB($pdo);
     } else {
         $result = false;
+        $massage = '指定された入力範囲を満たしていません';
     }
 
     // jsの方にデータ渡して、動作確認をする　DB操作が成功のときはtrue, 失敗の場合はfalseを返す
     $array_lists = [
-        'result' => $result
+        'result' => $result,
+        'message' => $massage
     ];
     echo json_encode($array_lists);
 ?>

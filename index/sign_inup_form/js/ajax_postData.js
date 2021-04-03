@@ -26,19 +26,7 @@ $(function(){
                 dataType: 'json', //必須。json形式で返すように設定
             }).done(function(data){
                 // 送られてきたデータでの処理
-                if (button_name === 'signin_button') {
-                    if (data.result === true) {
-                        alert('ログインに成功しました。');
-                    } else {
-                        alert('ログインに失敗しました。\nユーザIDまたはパスワードが間違っています。');
-                    }
-                } else {
-                    if (data.result === true) {
-                        alert('登録に成功しました。');
-                    } else {
-                        alert('登録に失敗しました。そのユーザIDはすでに使われています。');
-                    }
-                }
+                alert(data.message);
             }).fail(function(XMLHttpRequest, textStatus, errorThrown){
                 alert(errorThrown);
             })

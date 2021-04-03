@@ -25,15 +25,17 @@
         $parameter = array(':user_id'=>$uid, ':user_name'=>$uid, ':password'=>$password);
 
         // 挿入成功:true, 挿入不一致:falseを代入
-        $result = true;
+        $result = false;
         try {
             // SQLを実行
             $db->executePrepareSQL($pdo, $sql, $parameter);
             $result = true;
+            $massage = '登録完了しました';
         } catch(Exception $ex){
             // すでに同じIDのユーザが存在したときの処理
             // echo $ex->getMessage();
             $result = false;
+            $massage = 'すでにユーザIDが使われています';
         }
 
                 // データベースから切断
@@ -41,10 +43,12 @@
 
     } else {
         $result = false;
+        $massage = '指定された入力範囲を満たしていません';
     }
     // jsの方にデータ渡して、動作確認をする　DB操作が成功のときはtrue, 失敗の場合はfalseを返す
     $array_lists = [
-        'result' => $result
+        'result' => $result,
+        'message' => $massage
     ];
     echo json_encode($array_lists);
 ?>
