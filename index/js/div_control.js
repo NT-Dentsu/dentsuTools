@@ -19,7 +19,7 @@ for(num=0; num<16; num++){
     text = `
     <div class="panel-wrap">
         <div class="${className[num]}">
-            <a href="https://ja.wikipedia.org/wiki/%E3%82%B4%E3%83%AA%E3%83%A9">
+            <a href="./panel_sample/panel_sample.html">
                 <img src="images/image02.jpg" alt="">
             </a>
             <p>${name} ${num}</p>
