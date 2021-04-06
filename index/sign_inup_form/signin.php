@@ -31,7 +31,7 @@
         <div class="signup_wrapper">
             <!-- <p align="center" id="signup_text">アカウントを持っていませんか？</p> -->
             <div class="signup_totext">アカウントを持っていませんか？</div>
-            <a class="btn btn-lg btn-danger btn-block" href="./signup.html" role="button">登録する</a>
+            <a class="btn btn-lg btn-danger btn-block" href="./signup.php" role="button">登録する</a>
         </div>
     </form>
     <!-- Optional JavaScript -->
