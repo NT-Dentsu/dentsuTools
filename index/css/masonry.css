@@ -35,7 +35,7 @@
     /* width: inherit; */
     /* width: 320px; */
     background-color: aquamarine;
-    padding: 10px 10px 10px 10px;
+    padding: 2.5% 2.5% 2.5% 2.5%;
 }
 
 .panel.m{
@@ -43,19 +43,19 @@
 }
 .panel.m.left{
     /* 記述した順に[上][右][下][左]のパディング */
-    padding: 10px 0px 10px 10px;
+    padding: 2.5% 0% 2.5% 2.5%;
 }
 .panel.m.right{
     /* 記述した順に[上][右][下][左]のパディング */
-    padding: 10px 10px 10px 0px;
+    padding: 2.5% 2.5% 2.5% 0%;
 }
 .panel.m.top{
     /* 記述した順に[上][右][下][左]のパディング */
-    padding: 10px 10px 0px 10px;
+    padding: 2.5% 2.5% 0% 2.5%;
 }
 .panel.m.bottom{
     /* 記述した順に[上][右][下][左]のパディング */
-    padding: 0px 10px 10px 10px;
+    padding: 0% 2.5% 2.5% 2.5%;
 }
 
 .panel.l{
@@ -63,19 +63,19 @@
 }
 .panel.l.leftTop{
     /* 記述した順に[上][右][下][左]のパディング */
-    padding: 10px 0px 0px 10px;
+    padding: 2.5% 0% 0% 2.5%;
 }
 .panel.l.rightTop{
     /* 記述した順に[上][右][下][左]のパディング */
-    padding: 10px 10px 0px 0px;
+    padding: 2.5% 2.5% 0% 0%;
 }
 .panel.l.leftBottom{
     /* 記述した順に[上][右][下][左]のパディング */
-    padding: 0px 0px 10px 10px;
+    padding: 0% 0% 2.5% 2.5%;
 }
 .panel.l.rightBottom{
     /* 記述した順に[上][右][下][左]のパディング */
-    padding: 0px 10px 10px 0px;
+    padding: 0% 2.5% 2.5% 0%;
 }
 
 .panel img {

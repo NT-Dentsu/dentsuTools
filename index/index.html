@@ -158,7 +158,7 @@
     <!-- script -->
     <script src="./js/settings.js"></script>
     <script src="./js/div_control.js"></script>
-    <script src="./js/display_reflesh.js"></script>
+    <!-- <script src="./js/display_reflesh.js"></script> -->
 
 
 </body>
