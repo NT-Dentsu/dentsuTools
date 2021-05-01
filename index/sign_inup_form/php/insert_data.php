@@ -7,6 +7,8 @@
 
     // データベース共通クラスの読み込み
     require_once('../../common/dbaccess.php');
+    // パスワードハッシュ値生成に使う関数の読み込み
+    require_once('../../common/password_hash.php');
     require_once('./input_check.php');
 
     // ajax通信で受け取ったuser_id,passwordを変数に代入
@@ -19,10 +21,13 @@
         // データベース接続開始
         $pdo = $db->connectDB();
 
+        // パスワードのハッシュ値生成
+        $password_hash = generatePasswordHash($password);
+
         // プレースホルダを用いたSQL文を生成（プリペアドステートメント）
-        $sql = "INSERT INTO m_user(user_id, user_name, password, insert_time, update_time, user_icon) VALUES(:user_id, :user_name, :password, now(), now(), NULL)";
+        $sql = "INSERT INTO m_user(user_id, user_name, password_hash, insert_time, update_time, user_icon) VALUES(:user_id, :user_name, :password_hash, now(), now(), NULL)";
         // プレースホルダに対応する値を設定
-        $parameter = array(':user_id'=>$uid, ':user_name'=>$uid, ':password'=>$password);
+        $parameter = array(':user_id'=>$uid, ':user_name'=>$uid, ':password_hash'=>$password_hash);
 
         // 挿入成功:true, 挿入不一致:falseを代入
         $result = false;
