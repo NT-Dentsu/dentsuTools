@@ -1,0 +1,12 @@
+.user_icon{
+    width:75px;
+    height:75px;
+    border-radius:50%;
+    background:skyblue;
+}
+
+.user_icon img{
+    width:75px;
+    height:75px;
+    border-radius:50%;
+}
