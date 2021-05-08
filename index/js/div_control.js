@@ -1,6 +1,8 @@
-/*
-div要素の追加，変更をする．
-*/
+/**
+ * 制作者：bot810
+ * 更新日：2021/4/17
+ * div要素の追加，変更をする．
+ */
 
 //div要素の追加先id取得
 let id = $('#container');
@@ -31,7 +33,7 @@ for(num=0; num<16; num++){
     text = `
     <div class="panel-wrap">
         <div class="${className[num]}">
-            <a href="./panel_sample/panel_sample.html">
+            <a class="trim" href="./panel_sample/panel_sample.html">
                 <img src="${imageLink}" alt="">
             </a>
         </div>
