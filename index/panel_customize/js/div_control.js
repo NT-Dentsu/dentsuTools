@@ -1,41 +1,42 @@
-/*
-div要素の追加，変更をする．
-*/
+/**
+ * 制作者：bot810
+ * 更新日：2021/5/1
+ * div要素の追加，変更をする．
+ */
 
 //div要素の追加先id取得
 let id = $('#container');
 
-
-let name = 'カッコイイよね';
 let num = 0;
 let text;
-let className = ['panel m left', 'panel m right', 'panel s', 'panel m top',
-                'panel l leftTop', 'panel l rightTop', 'panel m top', 'panel m bottom',
-                'panel l leftBottom', 'panel l rightBottom', 'panel m bottom', 'panel s',
-                'panel s', 'panel m left', 'panel m right', 'panel s'];
-let imageLink;
+//クラス名と画像の対応
+//連想配列を利用
+let classImageDict = [
+    { className: 'panel l leftTop', iamgeLink: 'image_panel_L_lefttop.jpg' },
+    { className: 'panel l rightTop', iamgeLink: 'image_panel_L_righttop.jpg' },
+    { className: 'panel l leftBottom', iamgeLink: 'image_panel_L_leftbottom.jpg' },
+    { className: 'panel l rightBottom', iamgeLink: 'image_panel_L_rightbottom.jpg' },
+    { className: 'panel m left', iamgeLink: 'image_panel_M_left.jpg' },
+    { className: 'panel m right', iamgeLink: 'image_panel_M_right.jpg' },
+    { className: 'panel m top', iamgeLink: 'image_panel_M_top.jpg' },
+    { className: 'panel m bottom', iamgeLink: 'image_panel_M_bottom.jpg' },
+    { className: 'panel s', iamgeLink: 'image_panel_S.jpg' }
+];
+//表示するパネル
+let panelList = [4, 5, 8, 6,
+                0, 1, 6, 7,
+                2, 3, 7, 8,
+                8, 4, 5, 8];
 
-
-for (num = 0; num < 16; num++) {
-    // パネルサイズによって画像変更
-    if (!className[num].indexOf('panel l')) {//大サイズ
-        imageLink = './images/image04.jpg';
-    } else if (!className[num].indexOf('panel m left') || !className[num].indexOf('panel m right')) {//中サイズ横
-        imageLink = './images/image05.jpg';
-    } else if (!className[num].indexOf('panel m top') || !className[num].indexOf('panel m bottom')) {//中サイズ縦
-        imageLink = './images/image06.jpg';
-    } else if (!className[num].indexOf('panel s')) {//小サイズ
-        imageLink = './images/image07.jpg';
-    }
-
+panelList.forEach(function (index) {
     text = `
     <div class="panel-wrap">
-        <div class="${className[num]}">
-            <a href="../panel_sample/panel_sample.html">
-                <img src="${imageLink}" alt="">
+        <div class="${classImageDict[index].className}">
+            <a class="trim" href="../panel_sample/panel_sample.html">
+                <img src="./images/${classImageDict[index].iamgeLink}" alt="">
             </a>
         </div>
     </div>
     `;
     id.append(text);
-}
+});
