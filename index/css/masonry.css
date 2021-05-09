@@ -29,17 +29,18 @@
     width: 100%;
     height: 100%;
     position: absolute;
+    box-sizing: border-box;
 }
 
 .panel.s{
     /* width: inherit; */
     /* width: 320px; */
-    background-color: aquamarine;
+    background-color: darkblue;
     padding: 2.5% 2.5% 2.5% 2.5%;
 }
 
 .panel.m{
-    background-color: coral;
+    background-color: brown;
 }
 .panel.m.left{
     /* 記述した順に[上][右][下][左]のパディング */
@@ -59,7 +60,7 @@
 }
 
 .panel.l{
-    background-color: forestgreen;
+    background-color: darkgreen;
 }
 .panel.l.leftTop{
     /* 記述した順に[上][右][下][左]のパディング */
@@ -78,6 +79,50 @@
     padding: 0% 2.5% 2.5% 0%;
 }
 
+
+/* cssだけで画像をクリップする */
+/* rect(上, 右, 下, 左)	*/
+/* ボックスの左または上からの距離を「px」「%」などの単位を付けて、上→右→下→左の順にカンマで区切って指定します */
+.trim {
+    /* position: relative; */
+    box-sizing: border-box;
+}
+
 .panel img {
+    position: absolute;
     width: 100%;
+    /* padding: inherit; */
+    top: 50%; /*親のtopから50%*/
+    left: 50%; /*親のleftから50%*/
+    transform: translateY(-50%) translateX(-50%); /*子要素自体の大きさを考慮*/
+}
+
+.panel.s img {
+    clip-path: inset(2.5% 2.5% 2.5% 2.5%) ;
+}
+
+.panel.m.top img {
+    clip-path: inset(2.5% 2.5% 0% 2.5%) ;
+}
+.panel.m.bottom img {
+    clip-path: inset(0% 2.5% 2.5% 2.5%) ;
+}
+.panel.m.left img {
+    clip-path: inset(2.5% 0% 2.5% 2.5%) ;
+}
+.panel.m.right img {
+    clip-path: inset(2.5% 2.5% 2.5% 0%) ;
+}
+
+.panel.l.leftTop img {
+    clip-path: inset(2.5% 0% 0% 2.5%) ;
+}
+.panel.l.rightTop img {
+    clip-path: inset(2.5% 2.5% 0% 0%) ;
+}
+.panel.l.leftBottom img {
+    clip-path: inset(0% 0% 2.5% 2.5%) ;
+}
+.panel.l.rightBottom img {
+    clip-path: inset(0% 2.5% 2.5% 0%) ;
 }
