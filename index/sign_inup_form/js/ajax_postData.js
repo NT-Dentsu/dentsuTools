@@ -26,7 +26,12 @@ $(function(){
                 dataType: 'json', //必須。json形式で返すように設定
             }).done(function(data){
                 // 送られてきたデータでの処理
+                // 送信結果のメッセージを出力
                 alert(data.message);
+                // アカウント登録が成功したらログイン画面へ遷移
+                if (data.result === true) {
+                    location.href="/sign_inup_form/signin.php";
+                }
             }).fail(function(XMLHttpRequest, textStatus, errorThrown){
                 alert(errorThrown);
             })
