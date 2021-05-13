@@ -9,9 +9,9 @@ $(function(){
             let button_name = this.id;
 
             if (button_name === 'signin_button') {
-                path = './php/match_data.php'
+                path = '/sign_inup_form/php/match_data.php'
             } else {
-                path = './php/insert_data.php'
+                path = '/sign_inup_form/php/insert_data.php'
             }
 
             // ajax通信の処理
