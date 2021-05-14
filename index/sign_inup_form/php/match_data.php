@@ -36,6 +36,11 @@
                 // user_idが一致　かつ　パスワードが一致　のとき
                 $result = true;
                 $massage = 'ログイン成功しました';
+                // ログイン成功したとわかったのでセッションIDを再生成する
+                session_start();
+                session_regenerate_id(true);
+                // セッションファイルにユーザIDを格納する
+                $_SESSION['user_id'] = $uid;
             }
         } catch(Exception $ex){
             // すでに同じIDのユーザが存在したときの処理
