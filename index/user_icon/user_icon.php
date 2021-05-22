@@ -8,7 +8,7 @@
 <!-- ユーザーアイコン -->
 <div class="user_icon">
     <!-- ユーザーがアップロードした画像を表示する -->
-    <img src="path" alt="user_icon">
+    <img src="/content/default_icon.jpg" alt="user_icon">
     <!-- imgのpathを画像のパスに置き換える -->
     <script src="/user_icon/js/post_user_id.js"></script>
 </div>
