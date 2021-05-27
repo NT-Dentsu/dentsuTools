@@ -13,6 +13,8 @@
     require_once('../../common/password_hash.php');
     require_once('./input_check.php');
 
+    require_once __DIR__ . '/../../common/user_session.php';
+
     // 入力値チェックを行う
     if (input_check($uid) && input_check($input_password)) {
         $db = new DBAccess();
@@ -36,11 +38,8 @@
                 // user_idが一致　かつ　パスワードが一致　のとき
                 $result = true;
                 $massage = 'ログイン成功しました';
-                // ログイン成功したとわかったのでセッションIDを再生成する
-                session_start();
-                session_regenerate_id(true);
-                // セッションファイルにユーザIDを格納する
-                $_SESSION['user_id'] = $uid;
+
+                session_login($uid);
             }
         } catch(Exception $ex){
             // すでに同じIDのユーザが存在したときの処理

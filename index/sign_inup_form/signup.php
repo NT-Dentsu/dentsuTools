@@ -1,5 +1,6 @@
 <?php
-    session_start();
+    require_once __DIR__ . '/../common/user_session.php';
+    user_session_start();
 ?>
 <!DOCTYPE html>
 <html lang="ja">
