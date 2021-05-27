@@ -6,7 +6,7 @@
     # 機能:セッションの開始とセッションタイムアウトのチェックを行う
     function user_session_start() {
         session_start();
-        if (isset($_SESSION["last_activity"]) && (time() - $_SESSION["last_activity"] > 60)) {
+        if (isset($_SESSION["last_activity"]) && (time() - $_SESSION["last_activity"] > 3600)) {
             # 最後にアクセスしてから1時間経過したとき
             # セッション変数の初期化
             $_SESSION = array();
