@@ -1,6 +1,6 @@
 /**
  * 制作者：bot810
- * 更新日：2021/5/1
+ * 更新日：2021/05/15
  * div要素の追加，変更をする．
  */
 
@@ -28,15 +28,21 @@ let panelList = [4, 5, 8, 6,
                 2, 3, 7, 8,
                 8, 4, 5, 8];
 
-panelList.forEach(function (index) {
-    text = `
-    <div class="panel-wrap">
-        <div class="${classImageDict[index].className}">
-            <a class="trim" href="../panel_sample/panel_sample.html">
-                <img src="./images/${classImageDict[index].iamgeLink}" alt="">
-            </a>
+async function mason() {
+    panelList.forEach(function (index) {
+        text = `
+        <div class="panel-wrap">
+            <div class="${classImageDict[index].className}">
+                <a class="trim" href="../panel_sample/panel_sample.html">
+                    <img src="./images/${classImageDict[index].iamgeLink}" alt="">
+                </a>
+            </div>
         </div>
-    </div>
-    `;
-    id.append(text);
-});
+        `;
+        id.append(text);
+    });
+
+    // setTimeout(() => {
+    //     console.log("mason");
+    // }, 100);
+}
