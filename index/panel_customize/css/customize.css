@@ -1,0 +1,46 @@
+/*
+ * 制作者：bot810
+ * 制作日：2021/05/29
+ * カスタマイズ画面用css
+ */
+
+
+
+/* Lightbox2の諸々をカスタマイズ */
+#lightbox .lb-container {
+    padding: 3px;
+}
+
+/* 横並びにするためにflexboxを使用 */
+
+.topMenu{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.topMenu .thumbnail{
+    background-color: darkgreen;
+    width: 20%;
+}
+.topMenu .thumbnail img{
+    width: 100%;
+}
+
+.customizeMenu{
+    background-color: lightgoldenrodyellow;
+    /* height: 100px; */
+}
+
+.preset{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.preset .thumbnail{
+    background-color: darkmagenta;
+    width: 22%;
+    margin: 1.25%;
+}
+.preset .thumbnail img{
+    width: 100%;
+}
