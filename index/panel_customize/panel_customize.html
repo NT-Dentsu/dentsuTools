@@ -15,6 +15,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css" rel="stylesheet">
     <!-- cssの読み込み -->
     <link href="./css/masonry.css" rel="stylesheet">
+    <link href="./css/customize.css" rel="stylesheet">
 </head>
 
 <body>
@@ -107,6 +108,7 @@
                 <!-- <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas> -->
 
 
+                <h3>Now Layout</h3>
                 <!-- 「id=”container”」という親要素（div 要素）内に配置した「class=”panel_wrap”」という要素（div 要素）を整列させる処理を行う -->
                 <div id="wrapper">
                     <div id="container">
@@ -114,6 +116,55 @@
                     </div>
                 </div>
 
+
+                画像クリックで現在の状態を確認
+                <!-- Lightbox2を使用して画像の拡縮を行う -->
+                <!-- 参考サイト：https://allabout.co.jp/gm/gc/470618/ -->
+
+                <div class="topMenu">
+                    <div class="thumbnail">
+                        <a href="./images/image02.jpg" data-lightbox="gorilla" data-title="ごりら拡大">
+                            <img src="./images/image02.jpg" alt="ごりら">
+                        </a>
+                    </div>
+
+                    <div class="customizeMenu">
+                        ここにメニューを書く
+                        <h5>配置の変更</h5>
+                        ここにボタンかなんか
+                        <br><br>
+                        <h5>割り当ての変更</h5>
+                        ここにボタンかなんか
+                    </div>
+
+                </div>
+
+                <br>
+                <h3>Preset Layout</h3>
+
+                <div class="preset">
+                    <div class="thumbnail">
+                        <img src="./images/image02.jpg">
+                    </div>
+
+                    <div class="thumbnail">
+                        <img src="./images/image02.jpg">
+                    </div>
+
+                    <div class="thumbnail">
+                        <img src="./images/image02.jpg">
+                    </div>
+
+                    <div class="thumbnail">
+                        <img src="./images/image02.jpg">
+                    </div>
+                </div>
+                <!-- <input id="btn-Preview-Image" type="button" value="プレビュー" />
+                <a id="btn-Convert-Html2Image" href="#">ダウンロード</a>
+                <br />
+                <h3>プレビュー :</h3>
+                <div id="previewImage">
+                </div> -->
 
                 <!-- <h2>Section title</h2> -->
             </main>
