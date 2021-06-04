@@ -32,7 +32,7 @@ panelList.forEach(function(index){
     text = `
     <div class="panel-wrap">
         <div class="${classImageDict[index].className}">
-            <a class="trim" href="./panel_sample/panel_sample.html">
+            <a class="trim" href="./app/kindle_copy/kindle_copy.php">
                 <img src="./images/${classImageDict[index].iamgeLink}" alt="">
             </a>
         </div>
