@@ -15,12 +15,22 @@
 
 .topMenu{
     display: flex;
+<<<<<<< Updated upstream
     flex-wrap: wrap;
+=======
+    /* 子要素(フレックスアイテム)を一行に並べるか、複数行に並べるかを指定するプロパティ */
+    flex-wrap: wrap; /* フレックスアイテムが一行に収まらない時に複数行にする(幅指定ができるように) */
+>>>>>>> Stashed changes
 }
 
 .topMenu .thumbnail{
     background-color: darkgreen;
+<<<<<<< Updated upstream
     width: 20%;
+=======
+    /* flex-basisはwidthのように幅を指定するプロパティ。widthよりflex-basisが優先。初期値はauto。 */
+    flex-basis: 20%;
+>>>>>>> Stashed changes
 }
 .topMenu .thumbnail img{
     width: 100%;
@@ -28,6 +38,10 @@
 
 .customizeMenu{
     background-color: lightgoldenrodyellow;
+<<<<<<< Updated upstream
+=======
+    flex-basis: 80%;
+>>>>>>> Stashed changes
     /* height: 100px; */
 }
 
