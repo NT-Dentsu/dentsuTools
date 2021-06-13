@@ -6,10 +6,11 @@
     header("Content-Type: application/json; charset=UTF-8");
 
     // データベース共通クラスの読み込み
-    require_once('../../common/dbaccess.php');
+    require_once __DIR__ . '/../../common/dbaccess.php';
     // パスワードハッシュ値生成に使う関数の読み込み
-    require_once('../../common/password_hash.php');
-    require_once('./input_check.php');
+    require_once __DIR__ . '/../../common/password_hash.php';
+    // 入力チェック関数の読み込み
+    require_once __DIR__ . '/input_check.php';
 
     // ajax通信で受け取ったuser_id,passwordを変数に代入
     $uid = filter_input(INPUT_POST, 'uid');
