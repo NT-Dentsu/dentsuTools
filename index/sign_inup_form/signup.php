@@ -29,6 +29,7 @@
         </div>
         <button class="btn btn-lg btn-danger btn-block" id="signup_button" type="button">登録</button>
     </form>
+    <a href="/sign_inup_form/signin.php">ログイン画面へ戻る</a>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
