@@ -10,5 +10,16 @@
     <!-- ユーザーがアップロードした画像を表示する -->
     <img src="/content/default_icon.jpg" alt="user_icon">
     <!-- imgのpathを画像のパスに置き換える -->
-    <script src="/user_icon/js/post_user_id.js"></script>
+    <div id="user_icon_list">
+    <!-- クリック時に出現するリスト -->
+    <ul>
+        <!-- ToDo:プロフィール画面作ったらリンクを変更する -->
+        <li><a href="/index.php"><item>プロフィール</item></a></li>
+        <!-- クリック時はログアウトしてメイン画面に飛ばす -->
+        <li><a href="/index.php"><item>ログアウト</item></a></li>
+    </ul>
+    </div>
+    <!-- スクリプト -->
+    <script src="/user_icon/js/user_icon_img.js"></script>
+    <script src="/user_icon/js/user_icon_click.js"></script>
 </div>
