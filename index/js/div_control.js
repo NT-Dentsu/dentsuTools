@@ -1,13 +1,12 @@
 /**
  * 制作者：bot810
- * 更新日：2021/5/1
+ * 更新日：2021/06/14
  * div要素の追加，変更をする．
  */
 
 //div要素の追加先id取得
 let id = $('#container');
 
-let num = 0;
 let text;
 
 // 構造体的にクラスを使う
@@ -56,15 +55,14 @@ panelInfo.push(new PanelInfo("size S", 12, 5, "image_panel_S.jpg", "./panel_samp
 panelInfo.push(new PanelInfo("size S", 15, 5, "image_panel_S.jpg", "./panel_sample/panel_sample.html"));
 
 
-panelList.forEach(function(index){
+panelInfo.forEach(function(info){
     text = `
-    <div class="panel-wrap">
-        <div class="${classImageDict[index].className}">
-            <a class="trim" href="./app/kindle_copy/kindle_copy.php">
-                <img src="./images/${classImageDict[index].iamgeLink}" alt="">
-            </a>
-        </div>
+    <div class="${info.className}" style="grid-area: ${info.gridSize};">
+        <a href="./app/kindle_copy/kindle_copy.php">
+            <img src="./images/${info.iamgeLink}" alt="">
+        </a>
     </div>
     `;
+
     id.append(text);
 });
