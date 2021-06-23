@@ -4,6 +4,7 @@
  * こまごました設定ファイル．後で纏める可能性大
  */
 
+/*
 //画像読み込み後に並べ替えるようにする
 jQuery.event.add(window, "load", function () {
     //ここに Masonry プラグインのイニシャライズやオプションを記述
@@ -20,6 +21,7 @@ jQuery.event.add(window, "load", function () {
         //percentPosition: true
     });
 });
+*/
 
 //メニューバーのアイコンを表示する
 //参考
