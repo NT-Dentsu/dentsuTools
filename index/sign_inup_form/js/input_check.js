@@ -11,7 +11,7 @@ $(function () {
 function value_check() {
     $('input').on("keyup blur", function () {
         if ($(this).val().length >= 6 && $(this).val().length <= 20) {
-            if ($(this).val().match(/^[0-9a-z\-]+$/)) {
+            if ($(this).val().match(/^[0-9a-zA-Z\-]+$/)) {
                 $(this).removeClass('is-invalid');
                 return;
             }
