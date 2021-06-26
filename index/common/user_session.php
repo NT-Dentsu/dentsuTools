@@ -1,12 +1,16 @@
 <?php
-    # セッションに関する関数
+    # セッションに関する関数群
+
+    #定数定義
+    define("ONEHOUR", 3600);
+    define("PAST", time()-42000);
 
     # 制作者:towa1204
-    # 更新日:2021/5/27
+    # 更新日:2021/6/26
     # 機能:セッションの開始とセッションタイムアウトのチェックを行う
     function user_session_start() {
         session_start();
-        if (isset($_SESSION["last_activity"]) && (time() - $_SESSION["last_activity"] > 3600)) {
+        if (isset($_SESSION["last_activity"]) && (time() - $_SESSION["last_activity"] > ONEHOUR)) {
             # 最後にアクセスしてから1時間経過したとき
             # セッション変数の初期化
             $_SESSION = array();
@@ -31,7 +35,7 @@
     }
 
     # 制作者:towa1204
-    # 更新日:2021/5/27
+    # 更新日:2021/6/26
     # 機能:全ユーザのログアウトを行う
     function session_logout() {
         session_start();
@@ -41,7 +45,7 @@
         # セッションクッキーを削除
         if (ini_get("session.use_cookies")) {
             $params = session_get_cookie_params();
-            setcookie(session_name(), '', time() - 42000,
+            setcookie(session_name(), '', PAST,
                 $params["path"], $params["domain"],
                 $params["secure"], $params["httponly"]
             );
