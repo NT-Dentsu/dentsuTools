@@ -21,17 +21,26 @@ $(function(){
                 // 送るデータを指定
                 data:{
                     uid: $('input[type=text]').val(),
-                    password: $('input[type=password').val()
+                    password: $('input[type=password]').val()
                 },
                 dataType: 'json', //必須。json形式で返すように設定
             }).done(function(data){
                 // 送られてきたデータでの処理
                 // 送信結果のメッセージを出力
                 alert(data.message);
-                // アカウント登録が成功したらログイン画面へ遷移
-                if (data.result === true) {
-                    location.href="/sign_inup_form/signin.php";
+
+                // ログインorアカウント登録成功後の遷移処理
+                if (data.result == true) {
+                    // insertかmatchで処理を分岐
+                    if (data.type === 'insert') {
+                        // アカウント登録が成功したらログイン画面へ遷移
+                        location.href="/sign_inup_form/signin.php";
+                    } else {
+                        // ログインが成功したらホーム画面へ遷移
+                        location.href="/index.php";
+                    }
                 }
+                
             }).fail(function(XMLHttpRequest, textStatus, errorThrown){
                 alert(errorThrown);
             })

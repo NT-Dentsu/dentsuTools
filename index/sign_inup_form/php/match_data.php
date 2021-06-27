@@ -53,6 +53,7 @@
 
     // jsの方にデータ渡して、動作確認をする　DB操作が成功のときはtrue, 失敗の場合はfalseを返す
     $array_lists = [
+        'type' => 'match',
         'result' => $result,
         'message' => $massage
     ];
