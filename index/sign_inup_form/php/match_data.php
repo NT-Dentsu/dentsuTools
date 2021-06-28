@@ -14,6 +14,8 @@
     // 入力チェック関数の読み込み
     require_once __DIR__ . '/input_check.php';
 
+    require_once __DIR__ . '/../../common/user_session.php';
+
     // 入力値チェックを行う
     if (input_check($uid) && input_check($input_password)) {
         $db = new DBAccess();
@@ -37,6 +39,8 @@
                 // user_idが一致　かつ　パスワードが一致　のとき
                 $result = true;
                 $massage = 'ログイン成功しました';
+
+                session_login($uid);
             }
         } catch(Exception $ex){
             // すでに同じIDのユーザが存在したときの処理
