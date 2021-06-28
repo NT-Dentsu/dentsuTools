@@ -22,7 +22,7 @@
 
     </div>
     <form class="form">
-        <h1><a href="../index.html">Dentsu Tools</a></h1>
+        <h1><a href="/index.php">Dentsu Tools</a></h1>
         <div class="form-group">
             <input type="text" class="form-control is-invalid" placeholder="ユーザID" required autofocus>
             <div class="invalid-feedback">半角英数字ハイフン，6文字以上20文字以内</div>
