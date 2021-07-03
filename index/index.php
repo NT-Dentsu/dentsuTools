@@ -30,7 +30,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <!-- cssの読み込み -->
-    <link href="./css/masonry.css" rel="stylesheet">
+    <!-- <link href="./css/masonry.css" rel="stylesheet"> -->
+    <link href="./css/grid_layout.css" rel="stylesheet">
 </head>
 
 <body>
@@ -133,8 +134,12 @@
 
 
                 <!-- 「id=”container”」という親要素（div 要素）内に配置した「class=”panel_wrap”」という要素（div 要素）を整列させる処理を行う -->
+                <!-- グリッドレイアウトを使用 -->
                 <div id="wrapper">
                     <div id="container">
+                        <!-- グリッドのサイズ調整用 -->
+                        <div class="panel-wrap"></div>
+
                         <!-- ここにパネルが追加される -->
                     </div>
                 </div>
