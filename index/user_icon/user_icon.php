@@ -1,10 +1,8 @@
-<!-- ToDo:ここからテスト用のオブジェクト -->
-<form>
-    user_iconテスト用部品：<input type="text" id="test_id">
-    <button type="button" id="test_button">ユーザーID送信</button>
-</form>
-<!-- ToDo:ここまでテスト用のオブジェクト -->
-
+<?php
+    // セッションスタート
+    require_once __DIR__ . '/../common/user_session.php';
+    user_session_start();
+?>
 <!-- ユーザーアイコン -->
 <div class="user_icon">
     <!-- ユーザーがアップロードした画像を表示する -->
