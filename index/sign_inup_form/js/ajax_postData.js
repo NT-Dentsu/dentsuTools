@@ -1,7 +1,7 @@
 // signin, signup どちらもこれを利用する
 // クリックしたボタンのidによって呼び出すphpファイルのパスを切り替える
 $(function(){
-    $('form button').click(function() {
+    $('form button').click(function(e) {
         // 入力値チェックの基準を満たしているとき
         if ($('.is-invalid').length == 0) {
             let path;
@@ -28,7 +28,9 @@ $(function(){
                 // 送られてきたデータでの処理
                 // 送信結果のメッセージを出力
                 alert(data.message);
-
+                
+                // リロード防止
+                e.preventDefault();
                 // ログインorアカウント登録成功後の遷移処理
                 if (data.result == true) {
                     // insertかmatchで処理を分岐
