@@ -27,16 +27,16 @@ class PanelInfo {
         let col = this.pos % 4 + 1;
         if (this.size == 2) { // 大サイズ
             this.className = "panel L";
-            this.gridSize = row + "/ " + col + " / " + (row + 2) + " / " + (col + 2);
+            this.gridSize = row + " / " + col + " / " + (row + 2) + " / " + (col + 2);
         }else if(this.size == 3) {
             this.className = "panel M var";
-            this.gridSize = row + "/ " + col + " / " + (row + 2) + " / " + (col + 1);
+            this.gridSize = row + " / " + col + " / " + (row + 2) + " / " + (col + 1);
         }else if(this.size == 4) {
             this.className = "panel M hol";
-            this.gridSize = row + "/ " + col + " / " + (row + 1) + " / " + (col + 2);
+            this.gridSize = row + " / " + col + " / " + (row + 1) + " / " + (col + 2);
         }else if(this.size == 5) {
             this.className = "panel S";
-            this.gridSize = row + "/ " + col + " / " + (row + 1) + " / " + (col + 1);
+            this.gridSize = row + " / " + col + " / " + (row + 1) + " / " + (col + 1);
         }
     }
 }
@@ -54,6 +54,17 @@ panelInfo.push(new PanelInfo("size S", 11, 5, "image_panel_S.jpg", "./panel_samp
 panelInfo.push(new PanelInfo("size S", 12, 5, "image_panel_S.jpg", "./panel_sample/panel_sample.html"));
 panelInfo.push(new PanelInfo("size S", 15, 5, "image_panel_S.jpg", "./panel_sample/panel_sample.html"));
 
+
+// セッションストレージに現在の状態を保存
+//JSONを利用する
+//JSON文字列に変換
+let jpanelInfo = JSON.stringify(panelInfo);
+
+//JSON文字列をセッションストレージに書き込む
+sessionStorage.setItem("panelInfo", jpanelInfo);
+
+// データベースを経由してレイアウトの受け渡しを行う
+//DBwrite(panelInfo);
 
 panelInfo.forEach(function(info){
     text = `
