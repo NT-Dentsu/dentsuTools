@@ -11,8 +11,10 @@
     border-radius:50%;
     background:skyblue;
     /* 中央寄せにする */
-    margin-left:40%;
-    margin-top:3%;
+    margin-left:auto;
+    margin-right:auto;
+    /* 縦の配置を調整する */
+    margin-top:2%;
 }
 
 /* ユーザーアイコンの画像のCSS */
@@ -25,9 +27,13 @@
 
 /* ユーザー名のCSS */
 .profile .user_name{
-    /* 配置の設定 */
-    margin-left:40%;
-    margin-top:3%;
+    /* 最大幅を設定する */
+    max-width:350px;
+    /* 中央寄せにする */
+    margin-left:auto;
+    margin-right:auto;
+    /* 縦の配置を調整する */
+    margin-top:2%;
 }
 
 /* ユーザー名テキストボックスのCSS */
@@ -39,13 +45,19 @@
     border-right:none;
     /* クリック時の枠線を消す */
     outline:none;
+    margin-left:auto;
+    margin-right:auto;
 }
 
 /* パスワードのCSS */
 .profile .password{
-    /* 配置の設定 */
-    margin-left:40%;
-    margin-top:3%;
+    /* 最大幅を設定する */
+    max-width:350px;
+    /* 中央寄せにする */
+    margin-left:auto;
+    margin-right:auto;
+    /* 縦の配置を調整する */
+    margin-top:2%;
 }
 
 /* パスワードテキストボックスのCSS */
@@ -59,10 +71,20 @@
     outline:none;
 }
 
-/* ボタンのCSS */
-.profile button{
-    font-size:26px;
+/* ボタン群のCSS */
+.profile .profile_button{
+    /* 中央寄せにする */
+    text-align:center;
     /* 配置の設定 */
-    margin-left:27%;
-    margin-top:5%;
+    margin-top:6%;
+    /* 横並びにする */
+    display:flex;
+    justify-content:space-around;
+}
+
+/* ボタンのCSS */
+.profile .profile_button button{
+    font-size:26px;
+    /* 最小幅を設定する */
+    min-width:250px;
 }

@@ -52,20 +52,26 @@
                 </div>
                 <!-- プロフィール画面 -->
                 <div class="profile">
+                    <!-- ユーザーアイコン -->
                     <div class="user_icon">
                     </div>
+                    <!-- ユーザー名 -->
                     <div class="user_name">
                         ユーザー名<br>
                         <input type="text" name="user_name" maxlength="20">
                         <img src="/profile_form/images/edit_black_36dp.svg" alt="編集">
                     </div>
+                    <!-- パスワード -->
                     <div class="password">
                         パスワード<br>
                         <input type="text" name="password" maxlength="20">
                         <img src="/profile_form/images/edit_black_36dp.svg" alt="編集">
                     </div>
-                    <button type="button" name="cancle" class="btn btn-danger">キャンセル</button>
-                    <button type="button" name="update" class="btn btn-primary">保存</button>
+                    <!-- 保存ボタンとキャンセルボタン -->
+                    <div class="profile_button">
+                        <button type="button" name="cancle" class="btn btn-danger">キャンセル</button>
+                        <button type="button" name="update" class="btn btn-primary">保存</button>
+                    </div>
                 </div>
             </main>
         </div>
