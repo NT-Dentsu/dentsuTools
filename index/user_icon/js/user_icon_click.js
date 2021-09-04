@@ -9,10 +9,6 @@ $('.user_icon').on('click', function(){
     $.post({
         // 絶対パスで指定する
         url: '/user_icon/php/check_user_login.php',
-        // ToDo:セッション情報からユーザーIDを受け取る(削除予定)
-        data: {
-            userId: $('#test_id').val()
-        },
         // 結果をjsonで受け取る
         dataType: 'json',
     }).done(function(result){
@@ -42,10 +38,27 @@ $('.user_icon').on('click', function(){
 
 // ユーザーアイコンリストクリック時
 $('#user_icon_list li').on('click', function(){
+    // イベントの伝達をキャンセルする
+    event.stopPropagation()
     // ログアウトボタンがクリックされた
     if($(this).text() == 'ログアウト'){
-        // ToDo:セッション管理のマージ終わったらログアウト処理を入れる
-        alert('ログアウトしました');
+        $.post({
+            // 絶対パスで指定する
+            url: '/user_icon/php/exec_user_logout.php',
+            // 結果をjsonで受け取る
+            dataType: 'json',
+        }).done(function(result){
+            // ログアウト処理の結果を判定する
+            if(result.logout_result == 'logout_ok'){
+                alert('ログアウトしました');
+            }
+            else{
+                alert('ログアウト失敗しました');
+            }
+        }).fail(function(XMLHttpRequest, textStatus, errorThrown){
+            // エラーメッセージを表示
+            alert(errorThrown);
+        })
     }
 });
 
