@@ -1,0 +1,50 @@
+/*
+ * 制作者：bot810
+ * 制作日：2021/05/29
+ * カスタマイズ画面用css
+ */
+
+
+
+/* Lightbox2の諸々をカスタマイズ */
+#lightbox .lb-container {
+    padding: 3px;
+}
+
+/* 横並びにするためにflexboxを使用 */
+
+.topMenu{
+    display: flex;
+    /* 子要素(フレックスアイテム)を一行に並べるか、複数行に並べるかを指定するプロパティ */
+    flex-wrap: wrap; /* フレックスアイテムが一行に収まらない時に複数行にする(幅指定ができるように) */
+}
+
+.topMenu .thumbnail{
+    background-color: darkgreen;
+    width: 20%;
+    /* flex-basisはwidthのように幅を指定するプロパティ。widthよりflex-basisが優先。初期値はauto。 */
+    flex-basis: 20%;
+}
+.topMenu .thumbnail img{
+    width: 100%;
+}
+
+.customizeMenu{
+    background-color: lightgoldenrodyellow;
+    flex-basis: 80%;
+    /* height: 100px; */
+}
+
+.preset{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.preset .thumbnail{
+    background-color: darkmagenta;
+    width: 22%;
+    margin: 1.25%;
+}
+.preset .thumbnail img{
+    width: 100%;
+}
