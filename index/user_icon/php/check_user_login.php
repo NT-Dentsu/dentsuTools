@@ -1,8 +1,7 @@
 <?php
-    // ToDo:共通関数として定義する
-
     // 自身のディレクトリからの絶対パスを指定する
     require_once __DIR__ . '/../../common/dbaccess.php';
+    require_once __DIR__ . '/../../common/user_session.php';
     // ヘッダー情報の明記
     header('Content-Type: application/json; charset=UTF-8');
 
@@ -15,13 +14,19 @@
     const VALUE_LOGOUT_STATUS = 'logout';
 
     try{
+        // セッションスタート
+        if(session_start() == false){
+            // セッションスタートが失敗したらスローする
+            throw new Exception('session did not work');
+        }
+
         // 戻り値を初期化(デフォルトはログアウト状態)
         $arrResult = array(
             KEY_LOGIN_STATUS => VALUE_LOGOUT_STATUS
         );
 
-        // ToDo:セッションからユーザーIDを取得する
-        $userId = filter_input(INPUT_POST, 'userId');
+        // セッションからユーザーIDを取得する
+        $userId = $_SESSION['user_id'];
         // ユーザーIDがNULLまたは空だった場合
         if(is_null($userId) || empty($userId)){
             // 結果をjsonにする
@@ -60,6 +65,6 @@
         $arrResult[KEY_LOGIN_STATUS] = VALUE_LOGOUT_STATUS;
 
         // 結果をjsonにする
-        echo json_encode($arrRecord);
+        echo json_encode($arrResult);
     }
 ?>
