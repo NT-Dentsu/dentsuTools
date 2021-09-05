@@ -88,19 +88,19 @@
                 <h3>Preset Layout</h3>
 
                 <div class="preset">
-                    <div class="thumbnail">
+                    <div class="thumbnail" id="preset01">
                         <img src="./images/image02.jpg">
                     </div>
 
-                    <div class="thumbnail">
+                    <div class="thumbnail" id="preset02">
                         <img src="./images/image02.jpg">
                     </div>
 
-                    <div class="thumbnail">
+                    <div class="thumbnail" id="preset03">
                         <img src="./images/image02.jpg">
                     </div>
 
-                    <div class="thumbnail">
+                    <div class="thumbnail" id="preset04">
                         <img src="./images/image02.jpg">
                     </div>
                 </div>
@@ -146,8 +146,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js" type="text/javascript"></script>
 
     <!-- script -->
+    <script src="./js/panel_class.js"></script>
+    <script src="./js/panel_dataset_init_customize.js"></script>
+    <script src="./js/panel_priset_layout.js"></script>
     <script src="./js/settings.js"></script>
-    <!-- <script src="./js/div_control.js"></script> -->
+    <script src="./js/div_control.js"></script>
     <!-- <script src="./js/display_reflesh.js"></script> -->
     <script src="./js/customize.js"></script>
     <!-- <script src="./js/sync.js"></script> -->

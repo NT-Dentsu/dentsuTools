@@ -21,7 +21,6 @@
 
 .topMenu .thumbnail{
     background-color: darkgreen;
-    width: 20%;
     /* flex-basisはwidthのように幅を指定するプロパティ。widthよりflex-basisが優先。初期値はauto。 */
     flex-basis: 20%;
 }
