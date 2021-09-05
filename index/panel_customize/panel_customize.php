@@ -147,8 +147,8 @@
 
     <!-- script -->
     <script src="./js/panel_class.js"></script>
-    <script src="./js/panel_dataset_costomize.js"></script>
-    <script src="./js/panel_dataset_priset_layout.js"></script>
+    <script src="./js/panel_dataset_init_customize.js"></script>
+    <script src="./js/panel_priset_layout.js"></script>
     <script src="./js/settings.js"></script>
     <script src="./js/div_control.js"></script>
     <!-- <script src="./js/display_reflesh.js"></script> -->
