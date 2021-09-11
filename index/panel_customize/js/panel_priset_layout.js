@@ -1,7 +1,7 @@
 /**
  * 制作者：bot810
  * 制作日：2021/07/03
- * 最終更新日：2021/07/17
+ * 最終更新日：2021/09/11
  * パネルのプリセットレイアウトの並び順を
  * グリッドレイアウトの方式で保存
  * JSONとかにするかも
@@ -12,12 +12,6 @@ let priset01 = $("preset01");
 let priset02 = $("preset02");
 let priset03 = $("preset03");
 let priset04 = $("preset04");
-
-// データ設定
-let data01 = new Array();
-let data02 = new Array();
-let data03 = new Array();
-let data04 = new Array();
 
 // ここにデータの設定を書く
 //data01.push(new PanelInfo("size L", 4, 2, "image_panel_L.jpg", "./panel_sample/panel_sample.html"));
@@ -37,7 +31,7 @@ preset01.addEventListener('click', function (e) {
     if (clickFlag == "panel01") {
         alert("panel01 double click!!");
 
-        clickFlag = false;
+        clickFlag = "none";
         return;
     }
 
@@ -64,7 +58,7 @@ preset02.addEventListener('click', function (e) {
     if (clickFlag == "panel02") {
         alert("panel02 double click!!");
 
-        clickFlag = false;
+        clickFlag = "none";
         return;
     }
 
@@ -91,7 +85,7 @@ preset03.addEventListener('click', function (e) {
     if (clickFlag == "panel03") {
         alert("panel03 double click!!");
 
-        clickFlag = false;
+        clickFlag = "none";
         return;
     }
 
@@ -118,7 +112,7 @@ preset04.addEventListener('click', function (e) {
     if (clickFlag == "panel04") {
         alert("panel04 double click!!");
 
-        clickFlag = false;
+        clickFlag = "none";
         return;
     }
 
@@ -128,7 +122,7 @@ preset04.addEventListener('click', function (e) {
         // ダブルクリックによりclickedフラグがリセットされていない
         //     -> シングルクリックだった
 
-        // パネルレイアウトをプリセット2のレイアウトにする
+        // パネルレイアウトをプリセット4のレイアウトにする
         // panelInfo = data04;
         if (clickFlag == "panel04") {
             alert("panel04 single click!");
