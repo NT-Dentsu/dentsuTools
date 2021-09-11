@@ -104,6 +104,13 @@
                         <img src="./images/image02.jpg">
                     </div>
                 </div>
+
+                <!-- 保存ボタンとキャンセルボタン -->
+                <div class="customize_button">
+                    <button type="button" name="cancle" class="btn btn-danger">キャンセル</button>
+                    <button type="button" name="update" class="btn btn-primary">保存</button>
+                </div>
+
                 <!-- <input id="btn-Preview-Image" type="button" value="プレビュー" />
                 <a id="btn-Convert-Html2Image" href="#">ダウンロード</a>
                 <br />
