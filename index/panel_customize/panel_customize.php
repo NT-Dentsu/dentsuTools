@@ -107,7 +107,7 @@
 
                 <!-- 保存ボタンとキャンセルボタン -->
                 <div class="customize_button">
-                    <button type="button" name="cancle" class="btn btn-danger">キャンセル</button>
+                    <button type="button" name="cancel" class="btn btn-danger">キャンセル</button>
                     <button type="button" name="update" class="btn btn-primary">保存</button>
                 </div>
 
