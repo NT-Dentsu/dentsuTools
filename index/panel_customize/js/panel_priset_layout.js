@@ -45,6 +45,9 @@ preset01.addEventListener('click', function (e) {
         // panelInfo = data01;
         if (clickFlag == "panel01") {
             alert("panel01 single click!");
+
+            // 変更を反映させる
+            location.reload();
         }
 
         clickFlag = "none";
@@ -72,6 +75,9 @@ preset02.addEventListener('click', function (e) {
         // panelInfo = data02;
         if (clickFlag == "panel02") {
             alert("panel02 single click!");
+
+            // 変更を反映させる
+            location.reload();
         }
 
         clickFlag = "none";
@@ -99,6 +105,9 @@ preset03.addEventListener('click', function (e) {
         // panelInfo = data03;
         if (clickFlag == "panel03") {
             alert("panel03 single click!");
+
+            // 変更を反映させる
+            location.reload();
         }
 
         clickFlag = "none";
@@ -126,6 +135,9 @@ preset04.addEventListener('click', function (e) {
         // panelInfo = data04;
         if (clickFlag == "panel04") {
             alert("panel04 single click!");
+
+            // 変更を反映させる
+            location.reload();
         }
 
         clickFlag = "none";
