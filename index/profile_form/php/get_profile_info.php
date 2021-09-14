@@ -32,7 +32,7 @@
 
         // DBアクセスクラスを生成
         $clsDb = new DBAccess();
-        // 発行するクエリの定義
+        // 発行するクエリの定義(\'はエスケープシーケンス)
         $query = 'select user_id, user_name, \'*****\' as password, user_icon from m_user where user_id = :user_id;';
         // クエリを埋め込むパラメーターを設定
         $param = array(
