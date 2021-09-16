@@ -11,8 +11,7 @@
     <div id="user_icon_list">
     <!-- クリック時に出現するリスト -->
     <ul>
-        <!-- ToDo:プロフィール画面作ったらリンクを変更する -->
-        <li><a href="/index.php"><item>プロフィール</item></a></li>
+        <li><a href="/profile_form/profile.php"><item>プロフィール</item></a></li>
         <!-- クリック時はログアウトしてメイン画面に飛ばす -->
         <li><a href="/index.php"><item>ログアウト</item></a></li>
     </ul>
