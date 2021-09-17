@@ -1,7 +1,7 @@
 /**
  * 制作者：bot810
  * 制作日：2021/07/03
- * 最終更新日：2021/09/11
+ * 最終更新日：2021/09/17
  * パネルのプリセットレイアウトの並び順を
  * グリッドレイアウトの方式で保存
  * JSONとかにするかも
@@ -42,12 +42,13 @@ preset01.addEventListener('click', function (e) {
         //     -> シングルクリックだった
 
         // パネルレイアウトをプリセット1のレイアウトにする
-        // panelInfo = data01;
+        panelInfo = data01;
         if (clickFlag == "panel01") {
             alert("panel01 single click!");
 
             // 変更を反映させる
-            location.reload();
+            containerEnpty();
+            panelInfo.forEach(containerAppend);
         }
 
         clickFlag = "none";
@@ -72,12 +73,13 @@ preset02.addEventListener('click', function (e) {
         //     -> シングルクリックだった
 
         // パネルレイアウトをプリセット2のレイアウトにする
-        // panelInfo = data02;
+        panelInfo = data02;
         if (clickFlag == "panel02") {
             alert("panel02 single click!");
 
             // 変更を反映させる
-            location.reload();
+            containerEnpty();
+            panelInfo.forEach(containerAppend);
         }
 
         clickFlag = "none";
@@ -102,12 +104,13 @@ preset03.addEventListener('click', function (e) {
         //     -> シングルクリックだった
 
         // パネルレイアウトをプリセット3のレイアウトにする
-        // panelInfo = data03;
+        panelInfo = data03;
         if (clickFlag == "panel03") {
             alert("panel03 single click!");
 
             // 変更を反映させる
-            location.reload();
+            containerEnpty();
+            panelInfo.forEach(containerAppend);
         }
 
         clickFlag = "none";
@@ -132,12 +135,13 @@ preset04.addEventListener('click', function (e) {
         //     -> シングルクリックだった
 
         // パネルレイアウトをプリセット4のレイアウトにする
-        // panelInfo = data04;
+        panelInfo = data04;
         if (clickFlag == "panel04") {
             alert("panel04 single click!");
 
             // 変更を反映させる
-            location.reload();
+            containerEnpty();
+            panelInfo.forEach(containerAppend);
         }
 
         clickFlag = "none";
