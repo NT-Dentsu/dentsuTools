@@ -45,14 +45,14 @@ data02.push(new PanelInfo("size M hol", 13, 4, "image_panel_M_v.jpg", "./panel_s
 data02.push(new PanelInfo("size M var", 4, 3, "image_panel_M_v.jpg", "./panel_sample/panel_sample.html"));
 data02.push(new PanelInfo("size M var", 7, 3, "image_panel_M_h.jpg", "./panel_sample/panel_sample.html"));
 data02.push(new PanelInfo("size S", 0, 5, "image_panel_S.jpg", "./panel_sample/panel_sample.html"));
-data02.push(new PanelInfo("size S", 4, 5, "image_panel_S.jpg", "./panel_sample/panel_sample.html"));
+data02.push(new PanelInfo("size S", 3, 5, "image_panel_S.jpg", "./panel_sample/panel_sample.html"));
 data02.push(new PanelInfo("size S", 12, 5, "image_panel_S.jpg", "./panel_sample/panel_sample.html"));
 data02.push(new PanelInfo("size S", 15, 5, "image_panel_S.jpg", "./panel_sample/panel_sample.html"));
 
 // プリセット03
 // (名前, 位置, 大きさ, 画像, ツールへのリンク)
 data03.push(new PanelInfo("size L", 2, 2, "image_panel_L.jpg", "./panel_sample/panel_sample.html"));
-data03.push(new PanelInfo("size L", 8, 4, "image_panel_M_h.jpg", "./panel_sample/panel_sample.html"));
+data03.push(new PanelInfo("size L", 8, 2, "image_panel_M_h.jpg", "./panel_sample/panel_sample.html"));
 data03.push(new PanelInfo("size M var", 0, 3, "image_panel_M_v.jpg", "./panel_sample/panel_sample.html"));
 data03.push(new PanelInfo("size M var", 11, 3, "image_panel_M_h.jpg", "./panel_sample/panel_sample.html"));
 data03.push(new PanelInfo("size S", 1, 5, "image_panel_S.jpg", "./panel_sample/panel_sample.html"));
