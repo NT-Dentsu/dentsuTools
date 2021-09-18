@@ -1,11 +1,11 @@
 /**
  * 制作者：bot810
- * 更新日：2021/07/23
+ * 更新日：2021/09/18
  * div要素の追加，変更をする．
  */
 
 //div要素の追加先id取得
-let id = $('#container');
+let panelParentId = $('#container');
 
 let text;
 
@@ -25,13 +25,13 @@ function containerAppend(info){
     </div>
     `;
 
-    id.append(text);
+    panelParentId.append(text);
 }
 
 // containerの子要素を消す(更新処理用)
 function containerEnpty(){
     // 子要素消去
-    id.empty();
+    panelParentId.empty();
 
     // 注釈と調整を追加(調整は必須)
     text = `
@@ -40,5 +40,5 @@ function containerEnpty(){
 
     <!-- ここにパネルが追加される -->
     `;
-    id.append(text);
+    panelParentId.append(text);
 }
