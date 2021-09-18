@@ -54,22 +54,23 @@
                 <div class="profile">
                     <!-- ユーザーアイコン -->
                     <div class="user_icon">
+                        <img src="/content/default_icon.jpg" alt="user_icon">
                     </div>
                     <!-- ユーザー名 -->
                     <div class="user_name">
                         ユーザー名<br>
-                        <input type="text" name="user_name" maxlength="20">
+                        <input type="text" id="txt_user_name" maxlength="20">
                         <img src="/profile_form/images/edit_black_36dp.svg" alt="編集">
                     </div>
                     <!-- パスワード -->
                     <div class="password">
                         パスワード<br>
-                        <input type="text" name="password" maxlength="20">
+                        <input type="password" id="txt_password" maxlength="20">
                         <img src="/profile_form/images/edit_black_36dp.svg" alt="編集">
                     </div>
                     <!-- 保存ボタンとキャンセルボタン -->
                     <div class="profile_button">
-                        <button type="button" name="cancle" class="btn btn-danger">キャンセル</button>
+                        <button type="button" name="cancel" class="btn btn-danger">キャンセル</button>
                         <button type="button" name="update" class="btn btn-primary">保存</button>
                     </div>
                 </div>
@@ -84,7 +85,7 @@
         crossorigin="anonymous"></script>
     <!-- script -->
     <script src="/js/settings.js"></script>
-    <!-- <script src="./js/display_reflesh.js"></script> -->
+    <script src="/profile_form/js/profile_init.js"></script>
 
 </body>
 </html>
