@@ -82,5 +82,5 @@
         "status" => $status,
         "array"  => $resultArray
     );
-    json_encode($result);
+    echo json_encode($result);
 ?>
