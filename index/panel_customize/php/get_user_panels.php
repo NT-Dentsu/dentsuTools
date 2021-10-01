@@ -13,9 +13,9 @@
         の3つに場合分けしてjsonを出力しています
     */
 
-    // デバッグ用の処理
-    error_reporting(E_ALL);
-    ini_set('display_errors', 'On');
+    // // デバッグ用の処理
+    // error_reporting(E_ALL);
+    // ini_set('display_errors', 'On');
 
     // phpの実行結果のステータス
     const STATUS_EMPTY = "EMPTY";
