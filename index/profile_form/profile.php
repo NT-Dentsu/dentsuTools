@@ -1,3 +1,7 @@
+<?php
+    require_once __DIR__ . '/../common/user_session.php';
+    user_session_start();
+?>
 <!doctype html>
 <html lang="ja">
 
@@ -27,6 +31,9 @@
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
 
+    <!-- サーバーから更新結果を受け取るスクリプト -->
+    <script src="/profile_form/js/update_result.js"></script>
+
     <!-- タイトルバー -->
     <?php require_once __DIR__ . '/../common/titlebar.php'; ?>
 
@@ -50,30 +57,36 @@
                         </button>
                     </div>
                 </div>
-                <!-- プロフィール画面 -->
-                <div class="profile">
-                    <!-- ユーザーアイコン -->
-                    <div class="user_icon">
-                        <img src="/content/default_icon.jpg" alt="user_icon">
+                <form method="post" name="profile_form" action="/profile_form/php/recive_profile_info.php" enctype="multipart/form-data">
+                    <!-- プロフィール画面 -->
+                    <div class="profile">
+                        <!-- ユーザーアイコン -->
+                        <div class="user_icon">
+                            <!-- ファイル選択ボックスをユーザーアイコンで隠す -->
+                            <label>
+                                <img src="/content/default_icon.jpg" alt="user_icon">
+                                <input type="file" name="selected_user_icon" id="selected_user_icon" accept="image/jpeg, image/x-png">
+                            </label>
+                        </div>
+                        <!-- ユーザー名 -->
+                        <div class="user_name">
+                            ユーザー名<br>
+                            <input type="text" id="txt_user_name" maxlength="20">
+                            <img src="/profile_form/images/edit_black_36dp.svg" alt="編集">
+                        </div>
+                        <!-- パスワード -->
+                        <div class="password">
+                            パスワード<br>
+                            <input type="password" id="txt_password" maxlength="20">
+                            <img src="/profile_form/images/edit_black_36dp.svg" alt="編集">
+                        </div>
+                        <!-- 保存ボタンとキャンセルボタン -->
+                        <div class="profile_button">
+                            <button type="button" name="cancel" class="btn btn-danger">キャンセル</button>
+                            <button type="submit" name="update" class="btn btn-primary">保存</button>
+                        </div>
                     </div>
-                    <!-- ユーザー名 -->
-                    <div class="user_name">
-                        ユーザー名<br>
-                        <input type="text" id="txt_user_name" maxlength="20">
-                        <img src="/profile_form/images/edit_black_36dp.svg" alt="編集">
-                    </div>
-                    <!-- パスワード -->
-                    <div class="password">
-                        パスワード<br>
-                        <input type="password" id="txt_password" maxlength="20">
-                        <img src="/profile_form/images/edit_black_36dp.svg" alt="編集">
-                    </div>
-                    <!-- 保存ボタンとキャンセルボタン -->
-                    <div class="profile_button">
-                        <button type="button" name="cancel" class="btn btn-danger">キャンセル</button>
-                        <button type="button" name="update" class="btn btn-primary">保存</button>
-                    </div>
-                </div>
+                </form>
             </main>
         </div>
     </div>
@@ -86,6 +99,6 @@
     <!-- script -->
     <script src="/js/settings.js"></script>
     <script src="/profile_form/js/profile_init.js"></script>
-
+    <script src="/profile_form/js/profile_change.js"></script>
 </body>
 </html>
