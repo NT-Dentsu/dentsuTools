@@ -1,15 +1,11 @@
 $(function(){
     $('#get_data').click(function(e) {
-
-        getUserPanels().done(function(data){
-            // get_user_panels.phpの結果がdataに格納される
+        getPanelName().done(function(data){
             console.log(data);
-            // 以下にdataを取得した後の処理を結果
         }).fail(function(XMLHttpRequest, textStatus, errorThrown){
             // ajax通信の処理に失敗したとき
             alert(errorThrown);
         });
-
     })
 })
 
@@ -18,6 +14,15 @@ $(function(){
 function getUserPanels() {
     return $.get({
         url : "/panel_customize/php/get_user_panels.php",
+        dataType : 'json'
+    });
+}
+
+// m_panelテーブルに格納されているpanel_nameを取り出す関数
+// JSONデータの形式:{status：実行結果のステータス, array：パネルネームの配列}
+function getPanelName() {
+    return $.get({
+        url : "/panel_customize/php/get_panel_name.php",
         dataType : 'json'
     });
 }
