@@ -21,3 +21,17 @@ init.push(new PanelInfo("size S", 2, 5, "image_panel_S.jpg", "./panel_sample/pan
 init.push(new PanelInfo("size S", 11, 5, "image_panel_S.jpg", "./panel_sample/panel_sample.html"));
 init.push(new PanelInfo("size S", 12, 5, "image_panel_S.jpg", "./panel_sample/panel_sample.html"));
 init.push(new PanelInfo("size S", 15, 5, "image_panel_S.jpg", "./panel_sample/panel_sample.html"));
+
+// パネルデータをデータベースから取得
+let panelData = JSON.parse(getUserPanels());
+
+// パネルデータをもとにパネルクラス作成
+let panelInfo = new Array();
+panelData.forEach(data => {
+    // 連想配列の形式(要素は順不同)
+    // {"panel_name" : <String>, "anchor_num" : <int>, "panel_size" : <int>, "content_link" : <String>, "content_image" : <String>}
+    // PanelInfoの引数
+    // (名前, 位置, 大きさ, 画像, ツールへのリンク)
+    panelInfo.push(data.panel_name, data.anchor_num, data.panel_size, data.content_image, data.content_link);
+});
+
