@@ -1,21 +1,17 @@
 /**
  * 制作者：bot810
  * 制作日：2021/07/03
- * 最終更新日：2021/09/17
+ * 最終更新日：2021/10/09
  * パネルのプリセットレイアウトの並び順を
  * グリッドレイアウトの方式で保存
  * JSONとかにするかも
  */
 
-//class取得
+// id取得
 let priset01 = $("preset01");
 let priset02 = $("preset02");
 let priset03 = $("preset03");
 let priset04 = $("preset04");
-
-// ここにデータの設定を書く
-//data01.push(new PanelInfo("size L", 4, 2, "image_panel_L.jpg", "./panel_sample/panel_sample.html"));
-
 
 
 
