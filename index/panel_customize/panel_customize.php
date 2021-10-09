@@ -153,6 +153,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js" type="text/javascript"></script>
 
     <!-- script -->
+    <script src="./js/operate_paneldata.js"></script>
     <script src="./js/panel_class.js"></script>
     <script src="./js/panel_dataset_init_customize.js"></script>
     <script src="./js/panel_priset_layout.js"></script>
@@ -161,6 +162,7 @@
     <!-- <script src="./js/display_reflesh.js"></script> -->
     <script src="./js/customize.js"></script>
     <!-- <script src="./js/sync.js"></script> -->
+    <script src="./js/btn_event.js"></script>
 
 </body>
 
