@@ -9,7 +9,7 @@
 // パネルクラス定義
 class PanelInfo {
 
-    // フィールド(プライベート)
+    // フィールド
     panelName
     pos
     size
