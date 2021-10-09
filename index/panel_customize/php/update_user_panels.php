@@ -18,8 +18,8 @@
     // t_user_panelのanchor_num, panel_sizeの範囲
     const ANCHORNUMMIN = 0;
     const ANCHORNUMMAX = 15;
-    const PANELSIZEMIN = 0;
-    const PANELSIZEMAX = 255;
+    const PANELSIZEMIN = 2;
+    const PANELSIZEMAX = 5;
 
     // t_user_panel_infoのuser_id以外のカラム
     const PANELCOL = ["panel_name", "anchor_num", "panel_size"];
