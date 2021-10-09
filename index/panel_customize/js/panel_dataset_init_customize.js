@@ -13,10 +13,21 @@
 // 参考サイト；https://qiita.com/uralogical/items/ade858ccfa164d164a3b
 
 //ストレージから読み込んだJSON文字列を配列に戻す(暫定)
-let panelInfo = JSON.parse(sessionStorage.getItem("panelInfo"));
+//let panelInfo = JSON.parse(sessionStorage.getItem("panelInfo"));
 
 // ここでデータベースから読み込む
-//let panelInfo = DBread();
+let panelData = JSON.parse(getUserPanels());
+
+// パネルデータをもとにパネルクラス作成
+let panelInfo = new Array();
+panelData.forEach(data => {
+    // 連想配列の形式(要素は順不同)
+    // {"panel_name" : <String>, "anchor_num" : <int>, "panel_size" : <int>, "content_link" : <String>, "content_image" : <String>}
+    // PanelInfoの引数
+    // (名前, 位置, 大きさ, 画像, ツールへのリンク)
+    panelInfo.push(data.panel_name, data.anchor_num, data.panel_size, data.content_image, data.content_link);
+});
+
 
 
 // プリセットレイアウトの並びを定義
