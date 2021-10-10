@@ -2,8 +2,6 @@
     // 自身のディレクトリからの絶対パスを指定する
     require_once __DIR__ . '/../../common/dbaccess.php';
     require_once __DIR__ . '/../../common/user_session.php';
-    // ヘッダー情報の明記
-    header('Content-Type: application/json; charset=UTF-8');
 
     // アップロード先のパス
     const DOCUMENT_PATH = '/var/www/html';
@@ -120,8 +118,6 @@
             // セッションスタートが失敗したらスローする
             throw new Exception('session did not work');
         }
-        // 処理結果を初期化する
-        $_SESSION['profile_update'] = 'NG';
         // セッションからユーザーIDを取得する
         $userId = $_SESSION['user_id'];
 
@@ -131,17 +127,25 @@
             updateUserIcon($userId);
         }
 
-        // 処理結果をOKとする
-        $_SESSION['profile_update'] = 'OK';
-        // プロフィール画面に遷移させる
-        header('Location:/profile_form/profile.php');
+        // アラートを出す(ヒアドキュメントはインデントがあると動作しない)
+        echo <<<EOM
+            <script>
+                if(!alert('更新しました')){
+                    window.location.href = '/profile_form/profile.php';
+                }
+            </script>;
+EOM;
         exit;
     }
     catch(Exception $ex){
-        // 処理結果をNGとする
-        $_SESSION['profile_update'] = 'NG';
-        // プロフィール画面に遷移させる
-        header('Location:/profile_form/profile.php');
+        // アラートを出す(ヒアドキュメントはインデントがあると動作しない)
+        echo <<<EOM
+            <script>
+                if(!alert('更新失敗しました')){
+                    window.location.href = '/profile_form/profile.php';
+                }
+            </script>;
+EOM;
         exit;
     }
 ?>

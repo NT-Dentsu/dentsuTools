@@ -31,9 +31,6 @@
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
 
-    <!-- サーバーから更新結果を受け取るスクリプト -->
-    <script src="/profile_form/js/update_result.js"></script>
-
     <!-- タイトルバー -->
     <?php require_once __DIR__ . '/../common/titlebar.php'; ?>
 
