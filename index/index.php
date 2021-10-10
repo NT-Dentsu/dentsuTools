@@ -50,7 +50,7 @@
     <!-- タイトルバー -->
     <?php require_once __DIR__ . '/common/titlebar.php'; ?>
 
-    <div class="container-fluid">   
+    <div class="container-fluid">
         <div class="row">
             <!-- サイドバー -->
             <?php require_once __DIR__ . '/common/sidebar.php'; ?>
@@ -106,6 +106,8 @@
     <!-- script -->
     <script src="./js/settings.js"></script>
     <script src="./js/div_control.js"></script>
+    <!-- サイドバー用のJavaScript -->
+    <script src="./common/js/sidebar.js"></script>
     <!-- <script src="./js/display_reflesh.js"></script> -->
 
 

@@ -154,7 +154,8 @@
     <!-- <script src="./js/display_reflesh.js"></script> -->
     <script src="./js/customize.js"></script>
     <!-- <script src="./js/sync.js"></script> -->
-
+    <!-- サイドバー用のJavaScript -->
+    <script src="../common/js/sidebar.js"></script>
 </body>
 
 </html>
