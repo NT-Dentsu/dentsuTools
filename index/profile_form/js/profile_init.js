@@ -15,7 +15,7 @@ $(function(){
             document.getElementById('txt_user_name').value = result.user_name;
             document.getElementById('txt_password').value = result.password;
             // 画像はパスを置き換える
-            $('.user_icon').children('img').attr('src', result.user_icon);
+            $('.user_icon').find('img').attr('src', result.user_icon);
         }
         else{
             // エラーとなった旨を表示する
