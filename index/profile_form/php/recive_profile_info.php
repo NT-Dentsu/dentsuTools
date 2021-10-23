@@ -4,7 +4,6 @@
     require_once __DIR__ . '/../../common/user_session.php';
 
     // アップロード先のパス
-    const DOCUMENT_PATH = '/var/www/html';
     const UPLOAD_PATH = '/content/user_icon';
 
     // ----- ここからユーザーアイコン関係 -----
@@ -90,7 +89,7 @@
             // 一時ファイルパスを取得する
             $tempFile = $_FILES['selected_user_icon']['tmp_name'];
             // アップロード後のファイルパスを作成する
-            $removeFile = DOCUMENT_PATH . $fileName;
+            $removeFile = $_SERVER['DOCUMENT_ROOT'] . $fileName;
 
             // ファイルのアップロードを実行する
             if(uploadUserIcon($userId, $tempFile, $removeFile) == false){
