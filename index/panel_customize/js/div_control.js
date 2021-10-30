@@ -12,9 +12,11 @@ let text;
 // panelInfoはpanel_dataset_costomize.jsで定義されている
 // イベントを使ってクリック時の動作を制御する
 // イベント設定のためname属性にpanelを指定
+let panelInfo = new Array()
 panelPromise.then((data) => {
     console.log(data);
     data.forEach(containerAppend);
+    panelInfo = data;
 });
 
 // conttainerに子要素を追加する

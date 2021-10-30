@@ -29,7 +29,9 @@ let dict = new Array();
 init.forEach(info => {
     dict.push(info.data())
 });
-updateUserPanels(dict);
+// 初期データを格納
+// カスタマイズ画面のテストのためコメントアウト
+// updateUserPanels(dict);
 // デバッグ用コードここまで
 
 // console.log(dict);
