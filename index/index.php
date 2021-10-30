@@ -1,3 +1,7 @@
+<?php
+    require_once __DIR__ . '/common/user_session.php';
+    user_session_start();
+?>
 <!doctype html>
 <html lang="ja">
 
