@@ -9,19 +9,19 @@ let panelParentId = $('#container');
 
 let text;
 
-alert(typeof(panelInfo))
-alert(panelInfo)
-
 // panelInfoはpanel_dataset_costomize.jsで定義されている
 // イベントを使ってクリック時の動作を制御する
 // イベント設定のためname属性にpanelを指定
-panelInfo.forEach(containerAppend);
+panelPromise.then((data) => {
+    console.log(data);
+    data.forEach(containerAppend);
+});
 
 // conttainerに子要素を追加する
 function containerAppend(info){
     text = `
     <div class="${info.className}" style="grid-area: ${info.gridSize};">
-        <img src="./images/${info.iamgeLink}" alt="" class="panelImg">
+        <img src="${info.iamgeLink}" alt="" class="panelImg">
     </div>
     `;
 

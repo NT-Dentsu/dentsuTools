@@ -1,6 +1,7 @@
 /**
  * 制作者：bot810
- * 制作日：2020/07/22
+ * 制作日：2021/07/22
+ * 更新日：2021/10/30
  * パネル関連の並びを定義
  * home画面とcoutomize画面で一部違いがあるため別ファイルとする
  */
@@ -15,18 +16,39 @@
 //ストレージから読み込んだJSON文字列を配列に戻す(暫定)
 //let panelInfo = JSON.parse(sessionStorage.getItem("panelInfo"));
 
-// ここでデータベースから読み込む
-let panelData = JSON.parse(getUserPanels());
+// div_controlでの同期処理のためにPromise使う
+let panelPromise = new Promise(function (resolve) {
 
-// パネルデータをもとにパネルクラス作成
-let panelInfo = new Array();
-panelData.forEach(data => {
-    // 連想配列の形式(要素は順不同)
-    // {"panel_name" : <String>, "anchor_num" : <int>, "panel_size" : <int>, "content_link" : <String>, "content_image" : <String>}
-    // PanelInfoの引数
-    // (名前, 位置, 大きさ, 画像, ツールへのリンク)
-    panelInfo.push(data.panel_name, data.anchor_num, data.panel_size, data.content_image, data.content_link);
+    resolve(panelInit());
+
 });
+
+function panelInit() {
+    // 同期処理
+    return getUserPanels()
+    .then((data) => {
+        // パネルデータをデータベースから取得
+        return data.array;
+        // console.log(data);
+    })
+    .then((panelData) => { // 上の処理が終わった後に実行
+        // 渡すデータ
+        let panelInfo = new Array();
+        // パネルデータをもとにパネルクラス作成
+        console.log("here");
+        console.log(panelData);
+        panelData.forEach(data => {
+            // 連想配列の形式(要素は順不同)
+            // {"panel_name" : <String>, "anchor_num" : <int>, "panel_size" : <int>, "content_link" : <String>, "content_image" : <String>}
+            // PanelInfoの引数
+            // (名前, 位置, 大きさ, 画像, ツールへのリンク)
+            panelInfo.push(new PanelInfo(data.panel_name, data.anchor_num, data.panel_size, data.content_image, data.content_link));
+        });
+
+        // 最終的にここの値が返る
+        return panelInfo;
+    });
+}
 
 
 
