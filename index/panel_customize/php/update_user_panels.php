@@ -80,7 +80,7 @@
             }
 
             // 存在しないアンカー番号についての更新処理
-            for ($i = ANCHORNUMMIN; $i < ANCHORNUMMAX; $i++) {
+            for ($i = ANCHORNUMMIN; $i <= ANCHORNUMMAX; $i++) {
                 if (!in_array($i, $anchorNumArray, true)) {
                     $parameter = array(":user_id" => $userId, ":panel_name" => NULL, ":panel_size" => NULL, ":anchor_num" => $i);
                     // SQL文を実行
