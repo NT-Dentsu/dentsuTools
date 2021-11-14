@@ -2,9 +2,14 @@
     // 自身のディレクトリからの絶対パスを指定する
     require_once __DIR__ . '/../../common/dbaccess.php';
     require_once __DIR__ . '/../../common/user_session.php';
+    require_once __DIR__ . '/../../common/password_hash.php';
 
     // アップロード先のパス
     const UPLOAD_PATH = '/content/user_icon';
+    // ユーザー名のパターン
+    const PATTERN_USER_NAME = '/^[a-z,A-Z,\-,\d]{1,20}$/';
+    // パスワードのパターン
+    const PATTERN_PASSWORD = '/^[a-z,A-Z,\-,\d]{6,20}$/';
 
     // ----- ここからユーザーアイコン関係 -----
 
@@ -108,6 +113,134 @@
         }
     }
 
+    // 制作者:KARASU-2000
+    // 更新日:2021/11/14
+    // 機能:ユーザー名の入力チェックをする
+    function validationUserName($userName){
+        try{
+            // パターンにマッチすればtrueを返す
+            if(preg_match(PATTERN_USER_NAME, $userName) == 1){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+        catch(Exception $ex){
+            // 例外が発生したらfalseを返す
+            return false;
+        }
+    }
+
+    // 制作者:KARASU-2000
+    // 更新日:2021/11/14
+    // 機能:パスワードの入力チェックする
+    function validationPassword($password){
+        try{
+            // パターンにマッチすればtrueを返す
+            if(preg_match(PATTERN_PASSWORD, $password)){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+        catch(Exception $ex){
+            // 例外が発生したらfalseを返す
+            return false;
+        }
+    }
+
+    // 制作者:KARASU-2000
+    // 更新日:2021/11/14
+    // 機能:受け取ったユーザー名でユーザーマスタを更新する
+    function updateUserName($userId, $userName){
+        try{
+            // DBアクセスクラスを生成する
+            $clsDb = new DBAccess();
+            // 発行するクエリの定義
+            $query = 'update m_user set user_name = :user_name where user_id = :user_id;';
+
+            // DB接続
+            $pdo = $clsDb->connectDB();
+            // トランザクション開始
+            $clsDb->beginTransaction($pdo);
+            // 更新行数を取得するため一度ブランクでクリアする
+            $param = array(
+                ':user_name' => '',
+                ':user_id' => $userId,
+            );
+            // SQL実行
+            $clsDb->executePrepareSQL($pdo, $query, $param);
+            // パラメーター変更
+            $param[':user_name'] = $userName;
+            // SQL実行
+            $result = $clsDb->executePrepareSQL($pdo, $query, $param);
+            // 更新された件数を取り出す
+            $updateCount = $result->rowCount();
+            if($updateCount <= 0){
+                // ロールバック
+                $clsDb->rollbackTransaction($pdo);
+                // 更新結果が0件以下だったらfalseを返す
+                return false;
+            }
+            // コミット
+            $clsDb->commitTransaction($pdo);
+            // DB切断
+            $clsDb->disconnectDB($pdo);
+        }
+        catch(Exception $ex){
+            // 呼び出し元にthrowする
+            throw $ex;
+        }
+    }
+
+    // 制作者:KARASU-2000
+    // 更新日:2021/11/14
+    // 機能:受け取ったパスワードでユーザーマスタを更新する
+    function updatePassword($userId, $password){
+        try{
+            // DBアクセスクラスを生成する
+            $clsDb = new DBAccess();
+            // 発行するクエリの定義
+            $query = 'update m_user set password_hash = :password where user_id = :user_id;';
+            // パスワードのハッシュ化
+            $passwordHash = generatePasswordHash($password);
+
+            // DB接続
+            $pdo = $clsDb->connectDB();
+            // トランザクション開始
+            $clsDb->beginTransaction($pdo);
+            // 更新行数を取得するため一度ブランクでクリアする
+            $param = array(
+                ':password' => '',
+                ':user_id' => $userId,
+            );
+            // SQL実行
+            $clsDb->executePrepareSQL($pdo, $query, $param);
+            // パラメーター変更
+            $param[':password'] = $passwordHash;
+            // SQL実行
+            $result = $clsDb->executePrepareSQL($pdo, $query, $param);
+            // 更新された件数を取り出す
+            $updateCount = $result->rowCount();
+            if($updateCount <= 0){
+                // ロールバック
+                $clsDb->rollbackTransaction($pdo);
+                // 更新結果が0件以下だったらfalseを返す
+                return false;
+            }
+            // コミット
+            $clsDb->commitTransaction($pdo);
+            // DB切断
+            $clsDb->disconnectDB($pdo);
+        }
+        catch(Exception $ex){
+            // 呼び出し元にthrowする
+            throw $ex;
+        }
+    }
+
     // ----- ここまでユーザーアイコン関係 -----
 
     // main処理
@@ -124,6 +257,28 @@
         if($_FILES['selected_user_icon']['size'] > 0){
             // ユーザーアイコンを更新する
             updateUserIcon($userId);
+        }
+
+        // ユーザー名がNULLでなければ
+        if(isset($_POST['user_name']) == true){
+            $userName = $_POST['user_name'];
+            // 入力チェック
+            if(validationUserName($userName) == false){
+                throw new Exception('invalid user name');
+            }
+            // ユーザーマスタ更新
+            updateUserName($userId, $userName);
+        }
+
+        // パスワードがNULLでなければ
+        if(isset($_POST['password']) == true){
+            $password = $_POST['password'];
+            // 入力チェック
+            if(validationPassword($password) == false){
+                throw new Exception('invalid password');
+            }
+            // ユーザーマスタ更新
+            updatePassword($userId, $password);
         }
 
         // アラートを出す(ヒアドキュメントはインデントがあると動作しない)

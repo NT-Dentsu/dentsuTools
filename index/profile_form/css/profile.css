@@ -48,12 +48,22 @@
 /* ユーザー名のCSS */
 .profile .user_name{
     /* 最大幅を設定する */
-    max-width:350px;
+    max-width:385px;
     /* 中央寄せにする */
     margin-left:auto;
     margin-right:auto;
     /* 縦の配置を調整する */
     margin-top:2%;
+}
+
+.profile .user_name img{
+    /* マウス形状を変更する */
+    cursor:pointer;
+}
+
+.profile .user_name img:hover{
+    /* カーソルが置かれたときにグレーにする */
+    background-color:lightgray;
 }
 
 /* ユーザー名テキストボックスのCSS */
@@ -72,12 +82,22 @@
 /* パスワードのCSS */
 .profile .password{
     /* 最大幅を設定する */
-    max-width:350px;
+    max-width:385px;
     /* 中央寄せにする */
     margin-left:auto;
     margin-right:auto;
     /* 縦の配置を調整する */
     margin-top:2%;
+}
+
+.profile .password img{
+    /* マウス形状を変更する */
+    cursor:pointer;
+}
+
+.profile .password img:hover{
+    /* カーソルが置かれたときにグレーにする */
+    background-color:lightgray;
 }
 
 /* パスワードテキストボックスのCSS */
