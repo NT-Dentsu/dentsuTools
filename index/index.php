@@ -1,3 +1,7 @@
+<?php
+    require_once __DIR__ . '/common/user_session.php';
+    user_session_start();
+?>
 <!doctype html>
 <html lang="ja">
 
@@ -81,7 +85,13 @@
                 <div id="wrapper">
                     <div id="container">
                         <!-- グリッドのサイズ調整用 -->
-                        <div class="panel-wrap"></div>
+                        <div class="panel-wrap" style="grid-area: 1 / 1;"></div>
+                        <div class="panel-wrap" style="grid-area: 1 / 2;"></div>
+                        <div class="panel-wrap" style="grid-area: 1 / 3;"></div>
+                        <div class="panel-wrap" style="grid-area: 1 / 4;"></div>
+                        <div class="panel-wrap" style="grid-area: 2 / 1;"></div>
+                        <div class="panel-wrap" style="grid-area: 3 / 1;"></div>
+                        <div class="panel-wrap" style="grid-area: 4 / 1;"></div>
 
                         <!-- ここにパネルが追加される -->
                     </div>
@@ -109,6 +119,8 @@
     <script src="./js/panel_dataset_init_home.js"></script>
     <script src="./js/div_control.js"></script>
     <script src="./js/settings.js"></script>
+    <!-- サイドバー用のJavaScript -->
+    <script src="./common/js/sidebar.js"></script>
     <!-- <script src="./js/display_reflesh.js"></script> -->
 
 

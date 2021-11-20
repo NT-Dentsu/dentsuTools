@@ -5,6 +5,8 @@
 
 /* ユーザーアイコンのCSS */
 .profile .user_icon{
+    /* ファイル選択ボックスの基準にする */
+    position:relative;
     /* 円形にする */
     width:300px;
     height:300px;
@@ -23,6 +25,24 @@
     width:300px;
     height:300px;
     border-radius:50%;
+}
+
+.profile .user_icon img:hover{
+    /* 半透明にする */
+    opacity:0.5;
+    /* マウス形状を変更する */
+    cursor:pointer;
+}
+
+.profile .user_icon input{
+    /* ユーザーアイコンクラスからの相対位置を指定する */
+    position:absolute;
+    top:75px;
+    left:75px;
+    /* サイズ指定する */
+    width:25%;
+    /* 本来のボタンは非表示にする */
+    display:none;
 }
 
 /* ユーザー名のCSS */

@@ -67,24 +67,14 @@
 }
 
 
-
-/* cssだけで画像をクリップする */
-/* rect(上, 右, 下, 左)	*/
-/* ボックスの左または上からの距離を「px」「%」などの単位を付けて、上→右→下→左の順にカンマで区切って指定します */
-.trim {
-    /* position: relative; */
-    box-sizing: border-box;
-}
-
+/* 画像周りの設定 */
 .panel img {
     /* position: absolute; */
     width: 100%;
-    /* padding: inherit; */
-    /*
-    top: 50%; /*親のtopから50% * /
-    left: 50%; /*親のleftから50% * /
-    transform: translateY(-50%) translateX(-50%); /*子要素自体の大きさを考慮 * /
-    */
+    height: 100%;
+
+    /* object-fitでトリミング */
+    object-fit: cover;
 }
 
 

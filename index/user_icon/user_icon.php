@@ -1,8 +1,3 @@
-<?php
-    // セッションスタート
-    require_once __DIR__ . '/../common/user_session.php';
-    user_session_start();
-?>
 <!-- ユーザーアイコン -->
 <div class="user_icon">
     <!-- ユーザーがアップロードした画像を表示する -->

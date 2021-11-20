@@ -163,7 +163,8 @@
     <script src="./js/customize.js"></script>
     <!-- <script src="./js/sync.js"></script> -->
     <script src="./js/btn_event.js"></script>
-
+    <!-- サイドバー用のJavaScript -->
+    <script src="../common/js/sidebar.js"></script>
 </body>
 
 </html>
