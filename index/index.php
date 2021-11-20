@@ -114,8 +114,11 @@
 
 
     <!-- script -->
-    <script src="./js/settings.js"></script>
+    <script src="./js/operate_paneldata.js"></script>
+    <script src="./js/panel_class.js"></script>
+    <script src="./js/panel_dataset_init_home.js"></script>
     <script src="./js/div_control.js"></script>
+    <script src="./js/settings.js"></script>
     <!-- サイドバー用のJavaScript -->
     <script src="./common/js/sidebar.js"></script>
     <!-- <script src="./js/display_reflesh.js"></script> -->

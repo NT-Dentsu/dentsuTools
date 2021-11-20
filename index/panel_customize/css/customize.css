@@ -47,3 +47,26 @@
 .preset .thumbnail img{
     width: 100%;
 }
+
+/* profile.cssからパク */
+/* ボタン群のCSS */
+.customize_button{
+    /* 中央寄せにする */
+    text-align:center;
+    /* 配置の設定 */
+    margin-top:6%;
+    margin-bottom:10%;
+    /* 横並びにする */
+    display:flex;
+    /* 右寄せ */
+    justify-content:flex-end;
+    /* 隙間 */
+    gap: 5%;
+}
+
+/* ボタンのCSS */
+.customize_button button{
+    font-size:26px;
+    /* 最小幅を設定する */
+    min-width:250px;
+}

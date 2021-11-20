@@ -1,15 +1,22 @@
 /**
  * 制作者：bot810
- * 制作日：2020/07/22
+ * 制作日：2020/10/09
  * パネル関連のクラスを定義
  */
 
 
 
 // パネルクラス定義
-// 構造体的にクラスを使う
 class PanelInfo {
 
+    // フィールド
+    panelName
+    pos
+    size
+    imageLink
+    toolLink
+
+    // コンストラクタ
     constructor(name, pos, size, img, tool) {
         this.panelName = name;
         this.pos = pos;
@@ -37,4 +44,13 @@ class PanelInfo {
             this.gridSize = row + " / " + col + " / " + (row + 1) + " / " + (col + 1);
         }
     }
+
+
+    // パネルデータを渡す
+    // 渡す形式：連想配列
+    // 連想配列の形式(要素は順不同){"panel_name" : <String>, "anchor_num" : <int>, "panel_size" : <int>}
+    data(){
+        return {panel_name:this.panelName, anchor_num:this.pos, panel_size:this.size};
+    }
+
 }

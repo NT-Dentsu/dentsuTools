@@ -104,6 +104,13 @@
                         <img src="./images/image02.jpg">
                     </div>
                 </div>
+
+                <!-- 保存ボタンとキャンセルボタン -->
+                <div class="customize_button">
+                    <button type="button" name="cancel" class="btn btn-danger">キャンセル</button>
+                    <button type="button" name="update" class="btn btn-primary">保存</button>
+                </div>
+
                 <!-- <input id="btn-Preview-Image" type="button" value="プレビュー" />
                 <a id="btn-Convert-Html2Image" href="#">ダウンロード</a>
                 <br />
@@ -146,6 +153,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js" type="text/javascript"></script>
 
     <!-- script -->
+    <script src="./js/operate_paneldata.js"></script>
     <script src="./js/panel_class.js"></script>
     <script src="./js/panel_dataset_init_customize.js"></script>
     <script src="./js/panel_priset_layout.js"></script>
@@ -154,6 +162,7 @@
     <!-- <script src="./js/display_reflesh.js"></script> -->
     <script src="./js/customize.js"></script>
     <!-- <script src="./js/sync.js"></script> -->
+    <script src="./js/btn_event.js"></script>
     <!-- サイドバー用のJavaScript -->
     <script src="../common/js/sidebar.js"></script>
 </body>
