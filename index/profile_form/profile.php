@@ -67,20 +67,22 @@
                         </div>
                         <!-- ユーザー名 -->
                         <div class="user_name">
-                            ユーザー名<br>
-                            <input type="text" id="txt_user_name" maxlength="20">
+                            ニックネーム<br>
+                            <input type="text" name="user_name" id="txt_user_name" maxlength="20" placeholder="ニックネームを入力">
                             <img src="/profile_form/images/edit_black_36dp.svg" alt="編集">
+                            <div class="invalid-feedback">半角英数字ハイフン, 20文字以内</div>
                         </div>
                         <!-- パスワード -->
                         <div class="password">
                             パスワード<br>
-                            <input type="password" id="txt_password" maxlength="20">
+                            <input type="password" name="password" id="txt_password" maxlength="20" placeholder="パスワードを入力">
                             <img src="/profile_form/images/edit_black_36dp.svg" alt="編集">
+                            <div class="invalid-feedback">半角英数字ハイフン，6文字以上20文字以内</div>
                         </div>
                         <!-- 保存ボタンとキャンセルボタン -->
                         <div class="profile_button">
-                            <button type="button" name="cancel" class="btn btn-danger">キャンセル</button>
-                            <button type="submit" name="update" class="btn btn-primary">保存</button>
+                            <button type="button" name="cancel" class="btn btn-danger" id="btn_cancel">キャンセル</button>
+                            <button type="submit" name="update" class="btn btn-primary" id="btn_update">保存</button>
                         </div>
                     </div>
                 </form>
@@ -97,5 +99,6 @@
     <script src="/js/settings.js"></script>
     <script src="/profile_form/js/profile_init.js"></script>
     <script src="/profile_form/js/profile_change.js"></script>
+    <script src="/profile_form/js/profile_edit.js"></script>
 </body>
 </html>

@@ -1,8 +1,8 @@
 // ページ読み込み時
 $(function(){
     // テキストボックスを無効化する
-    document.getElementById('txt_user_name').disabled = 'disabled';
-    document.getElementById('txt_password').disabled = 'disabled';
+    document.getElementById('txt_user_name').disabled = 'true';
+    document.getElementById('txt_password').disabled = 'true';
 
     $.post({
         // 絶対パスで指定する
