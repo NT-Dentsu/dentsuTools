@@ -6,6 +6,8 @@
 
     // アップロード先のパス
     const UPLOAD_PATH = '/content/user_icon';
+    // ユーザーアイコンの拡張子のパターン(iを付けることで大文字小文字を区別しない)
+    const PATTERN_USER_ICON = '/.jtif$|.pjpeg$|.jepg$|.pjp$|.jpg$|.png$/i';
     // ユーザー名のパターン
     const PATTERN_USER_NAME = '/^[a-z,A-Z,\-,\d]{1,20}$/';
     // パスワードのパターン
@@ -86,11 +88,21 @@
         try{
             // ファイルが正常にアップロードされたかチェック
             if($_FILES['selected_user_icon']['error'] != UPLOAD_ERR_OK){
-                // アップロードに失敗していればfalseを返す
-                return false;
+                // アップロードに失敗していればスローする
+                throw new Exception('file upload error');
             }
-            // ファイル名を作成する
-            $fileName = UPLOAD_PATH . '/' . $userId . '_' . $_FILES['selected_user_icon']['name'];
+
+            // ファイルが画像形式かチェック
+            $matches = array();
+            if(preg_match(PATTERN_USER_ICON, $_FILES['selected_user_icon']['name'], $matches) == 0){
+                // 拡張子が一致しなければスローする
+                throw new Exception('file extension error');
+            }
+
+            // マッチしたテキスト(拡張子)を取り出す
+            $extension = $matches[0];
+            // ファイル名を作成する(ユーザーID_icon.拡張子)
+            $fileName = UPLOAD_PATH . '/' . $userId . '_' . 'icon' . $extension;
             // 一時ファイルパスを取得する
             $tempFile = $_FILES['selected_user_icon']['tmp_name'];
             // アップロード後のファイルパスを作成する
