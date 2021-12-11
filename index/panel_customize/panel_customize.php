@@ -50,59 +50,93 @@
                 <!-- <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas> -->
 
 
-                <h3>Now Layout</h3>
-                <!-- 「id=”container”」という親要素（div 要素）内に配置した「class=”panel_wrap”」という要素（div 要素）を整列させる処理を行う -->
-                <div id="wrapper">
-                    <div id="container">
-                        <!-- グリッドのサイズ調整用 -->
-                        <div class="panel-wrap"></div>
+                <!-- ここからカスタマイズ用の諸々 -->
 
-                        <!-- ここにパネルが追加される -->
-                    </div>
-                </div>
+                <!-- 横並びにするために全体をラップ -->
+                <div id="customize_flex">
 
+                    <!-- プレビュー画面 -->
+                    <div id="preview">
+                        <h3>Now Layout</h3>
+                        <!-- 「id=”container”」という親要素（div 要素）内に配置した「class=”panel_wrap”」という要素（div 要素）を整列させる処理を行う -->
+                        <div id="wrapper">
+                            <div id="container">
+                                <!-- グリッドのサイズ調整用 -->
+                                <div class="panel-wrap"></div>
 
-                画像クリックで現在の状態を確認
-                <!-- Lightbox2を使用して画像の拡縮を行う -->
-                <!-- 参考サイト：https://allabout.co.jp/gm/gc/470618/ -->
-
-                <div class="topMenu">
-                    <div class="thumbnail">
-                        <a href="./images/image02.jpg" data-lightbox="gorilla" data-title="ごりら拡大">
-                            <img src="./images/image02.jpg" alt="ごりら">
-                        </a>
+                                <!-- ここにパネルが追加される -->
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="customizeMenu">
-                        ここにメニューを書く
-                        <h5>配置の変更</h5>
-                        ここにボタンかなんか
-                        <br><br>
-                        <h5>割り当ての変更</h5>
-                        ここにボタンかなんか
+                    <!-- メニュー画面 -->
+                    <div id="menu">
+                        <!-- 画像クリックで現在の状態を確認 -->
+                        <!-- Lightbox2を使用して画像の拡縮を行う -->
+                        <!-- 参考サイト：https://allabout.co.jp/gm/gc/470618/ -->
+
+                        <h5>Customize Menu</h5>
+
+                        <!--
+                        <div class="topMenu">
+                            <div class="thumbnail">
+                                <a href="./images/image02.jpg" data-lightbox="gorilla" data-title="ごりら拡大">
+                                    <img src="./images/image02.jpg" alt="ごりら">
+                                </a>
+                            </div>
+
+                            <div class="customizeMenu">
+                                ここにメニューを書く
+                                <h5>配置の変更</h5>
+                                ここにボタンかなんか
+                                <br><br>
+                                <h5>割り当ての変更</h5>
+                                ここにボタンかなんか
+                            </div>
+
+                        </div>
+                        -->
+
+
+                        <div id="preset">
+                            <h7>Preset Layout</h7>
+
+                            <div class="thumbnail" id="preset01">
+                                <img src="./images/image02.jpg">
+                            </div>
+
+                            <div class="thumbnail" id="preset02">
+                                <img src="./images/image02.jpg">
+                            </div>
+
+                            <div class="thumbnail" id="preset03">
+                                <img src="./images/image02.jpg">
+                            </div>
+
+                            <div class="thumbnail" id="preset04">
+                                <img src="./images/image02.jpg">
+                            </div>
+                        </div>
+
+                        <div id="panel">
+                            <h7>Panel</h7>
+                        </div>
+
+                        <div id="contents">
+                            <h7>Contents</h7>
+                        </div>
+
+                        <!-- <input id="btn-Preview-Image" type="button" value="プレビュー" />
+                        <a id="btn-Convert-Html2Image" href="#">ダウンロード</a>
+                        <br />
+                        <h3>プレビュー :</h3>
+                        <div id="previewImage">
+                        </div> -->
+
                     </div>
 
-                </div>
 
-                <br>
-                <h3>Preset Layout</h3>
 
-                <div class="preset">
-                    <div class="thumbnail" id="preset01">
-                        <img src="./images/image02.jpg">
-                    </div>
-
-                    <div class="thumbnail" id="preset02">
-                        <img src="./images/image02.jpg">
-                    </div>
-
-                    <div class="thumbnail" id="preset03">
-                        <img src="./images/image02.jpg">
-                    </div>
-
-                    <div class="thumbnail" id="preset04">
-                        <img src="./images/image02.jpg">
-                    </div>
                 </div>
 
                 <!-- 保存ボタンとキャンセルボタン -->
@@ -110,13 +144,6 @@
                     <button type="button" name="cancel" class="btn btn-danger">キャンセル</button>
                     <button type="button" name="update" class="btn btn-primary">保存</button>
                 </div>
-
-                <!-- <input id="btn-Preview-Image" type="button" value="プレビュー" />
-                <a id="btn-Convert-Html2Image" href="#">ダウンロード</a>
-                <br />
-                <h3>プレビュー :</h3>
-                <div id="previewImage">
-                </div> -->
 
                 <!-- <h2>Section title</h2> -->
             </main>
