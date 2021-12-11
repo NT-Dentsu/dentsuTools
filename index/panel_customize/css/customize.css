@@ -1,6 +1,7 @@
 /*
  * 制作者：bot810
  * 制作日：2021/05/29
+ * 更新日：2021/12/11
  * カスタマイズ画面用css
  */
 
@@ -12,6 +13,20 @@
 }
 
 /* 横並びにするためにflexboxを使用 */
+
+#customize_flex{
+    display: flex;
+}
+
+#customize_flex #preview{
+    width: 75%;
+}
+
+#customize_flex #menu{
+    width: 25%;
+    margin-left: 1.5%;
+}
+
 
 .topMenu{
     display: flex;
@@ -34,19 +49,28 @@
     /* height: 100px; */
 }
 
-.preset{
-    display: flex;
+#preset{
+    /* display: flex; */
     flex-wrap: wrap;
 }
 
-.preset .thumbnail{
+#preset .thumbnail{
     background-color: darkmagenta;
-    width: 22%;
-    margin: 1.25%;
+    width: 100%;
+    margin: 2.5%;
 }
-.preset .thumbnail img{
+#preset .thumbnail img{
     width: 100%;
 }
+
+#panel{
+    flex-wrap: wrap;
+}
+
+#contents{
+    flex-wrap: wrap;
+}
+
 
 /* profile.cssからパク */
 /* ボタン群のCSS */
