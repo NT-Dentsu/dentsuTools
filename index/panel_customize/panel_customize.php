@@ -77,53 +77,40 @@
 
                         <h5>Customize Menu</h5>
 
-                        <!--
-                        <div class="topMenu">
-                            <div class="thumbnail">
-                                <a href="./images/image02.jpg" data-lightbox="gorilla" data-title="ごりら拡大">
-                                    <img src="./images/image02.jpg" alt="ごりら">
-                                </a>
+                        <ul>
+                            <li><a href="panel_customize.php">Panel</a></li>
+                            <li><a href="panel_customize.php">Contents</a></li>
+                            <li><a href="panel_customize.php">Preset</a></li>
+                        </ul>
+
+                        <div>
+                            <div id="panel">
+                                <h7>Panel</h7>
                             </div>
 
-                            <div class="customizeMenu">
-                                ここにメニューを書く
-                                <h5>配置の変更</h5>
-                                ここにボタンかなんか
-                                <br><br>
-                                <h5>割り当ての変更</h5>
-                                ここにボタンかなんか
+                            <div id="contents">
+                                <h7>Contents</h7>
                             </div>
 
-                        </div>
-                        -->
+                            <div id="preset">
+                                <h7>Preset Layout</h7>
 
+                                <div class="thumbnail" id="preset01">
+                                    <img src="./images/image02.jpg">
+                                </div>
 
-                        <div id="preset">
-                            <h7>Preset Layout</h7>
+                                <div class="thumbnail" id="preset02">
+                                    <img src="./images/image02.jpg">
+                                </div>
 
-                            <div class="thumbnail" id="preset01">
-                                <img src="./images/image02.jpg">
+                                <div class="thumbnail" id="preset03">
+                                    <img src="./images/image02.jpg">
+                                </div>
+
+                                <div class="thumbnail" id="preset04">
+                                    <img src="./images/image02.jpg">
+                                </div>
                             </div>
-
-                            <div class="thumbnail" id="preset02">
-                                <img src="./images/image02.jpg">
-                            </div>
-
-                            <div class="thumbnail" id="preset03">
-                                <img src="./images/image02.jpg">
-                            </div>
-
-                            <div class="thumbnail" id="preset04">
-                                <img src="./images/image02.jpg">
-                            </div>
-                        </div>
-
-                        <div id="panel">
-                            <h7>Panel</h7>
-                        </div>
-
-                        <div id="contents">
-                            <h7>Contents</h7>
                         </div>
 
                         <!-- <input id="btn-Preview-Image" type="button" value="プレビュー" />
