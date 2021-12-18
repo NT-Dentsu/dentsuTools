@@ -21,7 +21,7 @@ panelPromise.then((data) => {
 function containerAppend(info) {
     text = `
     <div class="${info.className}" style="grid-area: ${info.gridSize};">
-        <a href="./app/kindle_copy/kindle_copy.php">
+        <a href="/app/kindle_copy/kindle_copy.php">
             <img src="${info.iamgeLink}" alt="">
         </a>
     </div>

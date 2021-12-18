@@ -15,15 +15,15 @@
 let init = Array();
 
 // データを格納
-init.push(new PanelInfo("size L", 4, 2, "./images/image_panel_L.jpg", "./panel_sample/panel_sample.html"));
-init.push(new PanelInfo("size M hol", 0, 4, "./images/image_panel_M_h.jpg", "./panel_sample/panel_sample.html"));
-init.push(new PanelInfo("size M var", 3, 3, "./images/image_panel_M_v.jpg", "./panel_sample/panel_sample.html"));
-init.push(new PanelInfo("size M var", 6, 3, "./images/image_panel_M_v.jpg", "./panel_sample/panel_sample.html"));
-init.push(new PanelInfo("size M hol", 13, 4, "./images/image_panel_M_h.jpg", "./panel_sample/panel_sample.html"));
-init.push(new PanelInfo("size S", 2, 5, "./images/image_panel_S.jpg", "./panel_sample/panel_sample.html"));
-init.push(new PanelInfo("size S", 11, 5, "./images/image_panel_S.jpg", "./panel_sample/panel_sample.html"));
-init.push(new PanelInfo("size S", 12, 5, "./images/image_panel_S.jpg", "./panel_sample/panel_sample.html"));
-init.push(new PanelInfo("size S", 15, 5, "./images/image_panel_S.jpg", "./panel_sample/panel_sample.html"));
+init.push(new PanelInfo("size L", 4, 2, "/images/image_panel_L.jpg", "/panel_sample/panel_sample.html"));
+init.push(new PanelInfo("size M hol", 0, 4, "/images/image_panel_M_h.jpg", "/panel_sample/panel_sample.html"));
+init.push(new PanelInfo("size M var", 3, 3, "/images/image_panel_M_v.jpg", "/panel_sample/panel_sample.html"));
+init.push(new PanelInfo("size M var", 6, 3, "/images/image_panel_M_v.jpg", "/panel_sample/panel_sample.html"));
+init.push(new PanelInfo("size M hol", 13, 4, "/images/image_panel_M_h.jpg", "/panel_sample/panel_sample.html"));
+init.push(new PanelInfo("size S", 2, 5, "/images/image_panel_S.jpg", "/panel_sample/panel_sample.html"));
+init.push(new PanelInfo("size S", 11, 5, "/images/image_panel_S.jpg", "/panel_sample/panel_sample.html"));
+init.push(new PanelInfo("size S", 12, 5, "/images/image_panel_S.jpg", "/panel_sample/panel_sample.html"));
+init.push(new PanelInfo("size S", 15, 5, "/images/image_panel_S.jpg", "/panel_sample/panel_sample.html"));
 
 let dict = new Array();
 init.forEach(info => {
