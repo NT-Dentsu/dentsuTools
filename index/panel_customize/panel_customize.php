@@ -55,7 +55,14 @@
                 <div id="wrapper">
                     <div id="container">
                         <!-- グリッドのサイズ調整用 -->
-                        <div class="panel-wrap"></div>
+                        <div class="panel-wrap" style="grid-area: 1 / 1;"></div>
+                        <!-- <div class="panel-wrap" style="grid-area: 1 / 2;"></div>
+                        <div class="panel-wrap" style="grid-area: 1 / 3;"></div>
+                        <div class="panel-wrap" style="grid-area: 1 / 4;"></div>
+                        <div class="panel-wrap" style="grid-area: 2 / 1;"></div>
+                        <div class="panel-wrap" style="grid-area: 3 / 1;"></div>
+                        <div class="panel-wrap" style="grid-area: 4 / 1;"></div> -->
+                        <!-- なんかバグるので一旦コメントアウト -->
 
                         <!-- ここにパネルが追加される -->
                     </div>
