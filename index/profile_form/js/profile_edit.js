@@ -118,3 +118,12 @@ $('#btn_update').on('click', function(){
         }
     }
 });
+
+// キャンセルボタン押下時
+$('#btn_cancel').on('click', function(){
+    // 編集内容を破棄するか確認する
+    if(window.confirm('編集内容を破棄しますか？')){
+        // 破棄すると選択した場合にリロードを行う
+        location.reload();
+    }
+})

@@ -15,7 +15,7 @@
 <body>
     <!-- タイトルバー -->
     <?php require_once __DIR__ . '/../../common/titlebar.php'; ?>
-    
+
     <div class="container-fluid">
         <div class="row">
             <!-- サイドバー -->
@@ -24,19 +24,8 @@
             <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4" id="main">
                 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                     <h1 class="h2">Kindle Copy</h1>
-                    <!-- 上のボタン達 -->
-                    <div class="btn-toolbar mb-2 mb-md-0">
-                        <div class="btn-group mr-2">
-                            <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
-                            <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
-                        </div>
-                        <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
-                            <span data-feather="calendar"></span>
-                            This week
-                        </button>
-                    </div>
                 </div>
-                
+
                 <div class="contents">
                     <p>Kindleでコピーしたテキストの空白の削除および改行を行うツールです。<br>
                     オプションで、引用元の削除も行えます。</p>
@@ -54,8 +43,8 @@
                     </div>
                     <button type="button" class="btn btn-outline-primary">Copy</button>
                 </div>
-            </main> 
-        </div>       
+            </main>
+        </div>
     </div>
 
     <!-- Optional JavaScript -->
