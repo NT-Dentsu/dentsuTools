@@ -1,6 +1,7 @@
 /*
  * 制作者：bot810
  * 制作日：2021/05/29
+ * 更新日：2021/12/18
  * カスタマイズ画面用css
  */
 
@@ -12,41 +13,107 @@
 }
 
 /* 横並びにするためにflexboxを使用 */
-
-.topMenu{
+#customize_flex{
     display: flex;
-    /* 子要素(フレックスアイテム)を一行に並べるか、複数行に並べるかを指定するプロパティ */
-    flex-wrap: wrap; /* フレックスアイテムが一行に収まらない時に複数行にする(幅指定ができるように) */
 }
 
-.topMenu .thumbnail{
-    background-color: darkgreen;
-    /* flex-basisはwidthのように幅を指定するプロパティ。widthよりflex-basisが優先。初期値はauto。 */
-    flex-basis: 20%;
+#customize_flex #preview{
+    width: 60%;
 }
-.topMenu .thumbnail img{
+
+#customize_flex #menu{
+    width: 40%;
+    margin-left: 1.5%;
+    /* display: block; */
+}
+
+/* タブメニュー用のCSS */
+#customize_flex #menu ul{
+	display: block;
+	/* float: left; */
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+	overflow: hidden;
+	width: 100%;
+    height: auto;
+	border-radius: 5px 5px 0 0;
+	background: #555;
+}
+
+#customize_flex #menu li{
+	border-bottom: 1px solid #000;
+	margin-bottom: 1px;
+	text-align: center;
+	padding: 0px;
+    width: calc(100%/3);
+    height: 100%;
+
+    /* リストを横並びに */
+    float: left;
+}
+/*
+#customize_flex #menu li:last-child{
+	margin-bottom: 0px;
+	border-bottom: 0px;
+}
+ */
+#customize_flex #menu li a{
+	display: block;
+	font-size: 14pt;
+	color: #000;
+	text-decoration: none;
+	padding: 7%;
+    height: 100%;
+	background: #eee;
+	/* background: -webkit-linear-gradient(top,#444,#333); */
+	/* background: -moz-linear-gradient(top,#444,#333); */
+
+	/* 縦書き */
+	/* writing-mode: vertical-rl; */
+	/* text-orientation: sideways; */
+	/* padding: 20%; */
+}
+#customize_flex #menu li a.selected{
+	background: #000;
+	color: #eee;
+}
+#customize_flex #menu div{
+    /* display: block; */
+	/* float: left; */
+	background: #eee;
+    background-color: #eee;
     width: 100%;
+    min-height: 80%;
+    height: fit-content;
 }
 
-.customizeMenu{
-    background-color: lightgoldenrodyellow;
-    flex-basis: 80%;
-    /* height: 100px; */
-}
-
-.preset{
-    display: flex;
+/* 各メニューのCSS */
+#panel{
     flex-wrap: wrap;
 }
 
-.preset .thumbnail{
-    background-color: darkmagenta;
-    width: 22%;
-    margin: 1.25%;
+#contents{
+    flex-wrap: wrap;
 }
-.preset .thumbnail img{
+
+#preset{
+    /* display: flex; */
+    flex-wrap: wrap;
+}
+
+#preset .thumbnail{
+    display: block;
+    background-color: darkmagenta;
+    width: 50%!important; /* 優先度を最強にする */
+    height: auto!important;
+    margin: 2.5%;
+}
+#preset .thumbnail img{
     width: 100%;
 }
+
+
 
 /* profile.cssからパク */
 /* ボタン群のCSS */
