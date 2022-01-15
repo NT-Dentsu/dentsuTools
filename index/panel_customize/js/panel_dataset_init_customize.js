@@ -1,7 +1,7 @@
 /**
  * 制作者：bot810
  * 制作日：2021/07/22
- * 更新日：2022/01/08
+ * 更新日：2022/01/15
  * パネル関連の並びを定義
  * home画面とcoutomize画面で一部違いがあるため別ファイルとする
  */
@@ -30,8 +30,8 @@ function panelInit() {
         // 渡すデータ
         let panelInfo = new Array();
         // パネルデータをもとにパネルクラス作成
-        console.log("here");
-        console.log(panelData);
+        // console.log("here");
+        // console.log(panelData);
         panelData.forEach(data => {
             // 連想配列の形式(要素は順不同)
             // {"panel_name" : <String>, "anchor_num" : <int>, "panel_size" : <int>, "content_link" : <String>, "content_image" : <String>}
