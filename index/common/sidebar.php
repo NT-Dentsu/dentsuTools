@@ -15,6 +15,12 @@
                 </a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" href="/profile_form/profile.php">
+                    <span data-feather="user"></span>
+                    Profile
+                </a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="#">
                     <span data-feather="file"></span>
                     Contents

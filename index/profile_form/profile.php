@@ -86,6 +86,7 @@
         crossorigin="anonymous"></script>
     <!-- script -->
     <script src="/js/settings.js"></script>
+    <script src="/common/js/sidebar.js"></script>
     <script src="/profile_form/js/profile_init.js"></script>
     <script src="/profile_form/js/profile_change.js"></script>
     <script src="/profile_form/js/profile_edit.js"></script>
