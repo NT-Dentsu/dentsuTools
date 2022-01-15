@@ -1,6 +1,6 @@
 /**
  * 制作者：bot810
- * 制作日：2022/01/08
+ * 制作日：2022/01/15
  * 保存ボタンとキャンセルボタンのイベントを設定
  */
 
@@ -27,11 +27,14 @@ cancel.click(function () {
     alert("cancel");
 
     // もとの奴に戻す
-    panelPromise.then((panelInfo) => {
-        console.log(panelInfo); // panelInfoにデータベースからの情報が入る
+    new Promise(function (resolve) {
+        resolve(panelInit()); // ここでデータベースから読み込み
+    })
+    .then((pInfo) => {
+        console.log(pInfo); // pInfoにデータベースからの情報が入る
         // 変更を反映させる
         containerEnpty();
-        panelInfo.forEach(containerAppend);
+        pInfo.forEach(containerAppend);
     });
 
 });
