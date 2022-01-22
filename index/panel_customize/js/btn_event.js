@@ -1,6 +1,6 @@
 /**
  * 制作者：bot810
- * 制作日：2021/10/09
+ * 制作日：2022/01/15
  * 保存ボタンとキャンセルボタンのイベントを設定
  */
 
@@ -27,13 +27,15 @@ cancel.click(function () {
     alert("cancel");
 
     // もとの奴に戻す
-    panelInfo = new Array(); // 初期化
-    panelData.forEach(data => {
-        // 連想配列の形式(要素は順不同)
-        // {"panel_name" : <String>, "anchor_num" : <int>, "panel_size" : <int>, "content_link" : <String>, "content_image" : <String>}
-        // PanelInfoの引数
-        // (名前, 位置, 大きさ, 画像, ツールへのリンク)
-        panelInfo.push(data.panel_name, data.anchor_num, data.panel_size, data.content_image, data.content_link);
+    new Promise(function (resolve) {
+        resolve(panelInit()); // ここでデータベースから読み込み
+    })
+    .then((pInfo) => {
+        console.log(pInfo); // pInfoにデータベースからの情報が入る
+        // 変更を反映させる
+        containerEnpty();
+        pInfo.forEach(containerAppend);
     });
+
 });
 
