@@ -1,9 +1,9 @@
 $(function() {
     $('button').on('click', function(){
         // textareaを選択
-        $('#output').select();
+        text = $('#output').val();
         // コピー
-        document.execCommand('copy');
+        copyToClipboard(text);
     });
 
     $('#input').on("keyup blur", function() {
@@ -27,3 +27,12 @@ $(function() {
         $('#output').text(input_str);
     })
 })
+
+async function copyToClipboard(text) {
+    try {
+      await navigator.clipboard.writeText(text)
+      alert('コピーしました')
+    } catch (error) {
+      alert((error && error.message) || 'コピーに失敗しました')
+    }
+  }
