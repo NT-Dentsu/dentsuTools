@@ -73,14 +73,20 @@
                         </ul>
 
                         <div>
+                            <!-- panelタブ -->
                             <div id="panel">
                                 <h7>Panel</h7>
+
+                                <!-- ここに各サイズのパネルを追加 -->
+                                <!-- パネルの種類は可変なのでjsで動的に設定 -->
                             </div>
 
+                            <!-- contentsタブ -->
                             <div id="contents">
                                 <h7>Contents</h7>
                             </div>
 
+                            <!-- presetタブ -->
                             <div id="preset">
                                 <h7>Preset Layout</h7>
 
@@ -164,6 +170,7 @@
     <script src="./js/div_control.js"></script>
     <!-- <script src="./js/display_reflesh.js"></script> -->
     <script src="./js/customize.js"></script>
+    <script src="./js/customize_panel.js"></script>
     <!-- <script src="./js/sync.js"></script> -->
     <script src="./js/btn_event.js"></script>
     <!-- サイドバー用のJavaScript -->
