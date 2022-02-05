@@ -11,7 +11,8 @@
     <!-- こ↑こ↓，サインイン処理 -->
     <ul class="navbar-nav px-3">
         <li class="nav-item text-nowrap">
-            <a class="nav-link" href="/sign_inup_form/signin.php">Sign in</a>
+            <!-- ユーザーアイコン -->
+            <?php include("./user_icon/user_icon.php") ?>
         </li>
     </ul>
 </nav>

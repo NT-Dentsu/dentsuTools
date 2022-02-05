@@ -1,17 +1,20 @@
 /* ユーザーアイコンクラスのCSS */
 .user_icon{
     /* 円形にする */
-    width:75px;
-    height:75px;
+    width:65px;
+    height:65px;
     border-radius:50%;
     background:skyblue;
+    /* 配置時に上下の幅を持たせる */
+    margin-top:5%;
+    margin-bottom:5%
 }
 
 /* ユーザーアイコンクラスの画像のCSS */
 .user_icon img{
-    /* 円形にする */
-    width:75px;
-    height:75px;
+    /* 円形にする(親のオブジェクトが円形のため100%でよい) */
+    width:100%;
+    height:100%;
     border-radius:50%;
 }
 
@@ -21,7 +24,7 @@
     padding:0;
     list-style:none;
     position:relative;
-    left:40px;
+    right:110%;
     /* パネルよりも前面に表示させるため */
     z-index:10;
 }
