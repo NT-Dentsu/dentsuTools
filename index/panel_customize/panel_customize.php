@@ -31,8 +31,7 @@
 
             <!-- メイン部分 -->
             <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4" id="main">
-                <div
-                    class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                     <h1 class="h2">Panel Customize</h1>
                 </div>
 
@@ -67,7 +66,7 @@
                         <h5>Customize Menu</h5>
 
                         <ul>
-                            <li><a href="panel_customize.php">Panel</a></li>
+                            <li><a id="panel_tab" href="panel_customize.php">Panel</a></li>
                             <li><a href="panel_customize.php">Contents</a></li>
                             <li><a href="panel_customize.php">Preset</a></li>
                         </ul>
@@ -78,7 +77,30 @@
                                 <h7>Panel</h7>
 
                                 <!-- ここに各サイズのパネルを追加 -->
-                                <!-- パネルの種類は可変なのでjsで動的に設定 -->
+                                <!-- パネルの種類は可変なのでjsで動的に設定する予定 -->
+
+                                <br>
+
+                                <div class="thumbnail" id="panel_L">
+                                    <label class="panel_label">4×4</label>
+                                    <img src="/images/image_panel_L.jpg">
+                                </div>
+
+                                <div class="thumbnail" id="panel_M_hol">
+                                    <label class="panel_label">1×2</label>
+                                    <img src="/images/image_panel_M_h.jpg">
+                                </div>
+
+                                <div class="thumbnail" id="panel_M_var" style="width: 20%;">
+                                    <label class="panel_label">2×1</label>
+                                    <img src="/images/image_panel_M_v.jpg">
+                                </div>
+
+                                <div class="thumbnail" id="panel_S" style="width: 20%;">
+                                    <label class="panel_label">1×1</label>
+                                    <img src="/images/image_panel_S.jpg">
+                                </div>
+
                             </div>
 
                             <!-- contentsタブ -->
