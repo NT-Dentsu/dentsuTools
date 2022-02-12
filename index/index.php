@@ -63,11 +63,6 @@
                 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                     <h1 class="h2">Home</h1>
                 </div>
-                <!-- ユーザーアイコン -->
-                <?php include("./user_icon/user_icon.php") ?>
-
-                <!-- <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas> -->
-
 
                 <!-- 「id=”container”」という親要素（div 要素）内に配置した「class=”panel_wrap”」という要素（div 要素）を整列させる処理を行う -->
                 <!-- グリッドレイアウトを使用 -->
