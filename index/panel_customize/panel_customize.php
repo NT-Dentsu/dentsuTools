@@ -82,22 +82,22 @@
 
                                 <div class="thumbnail" id="panel_L">
                                     <label class="panel_label">4×4</label>
-                                    <img src="/images/image_panel_L.jpg">
+                                    <img src="/images/image_panel_L.jpg" name="2">
                                 </div>
 
                                 <div class="thumbnail" id="panel_M_hol">
                                     <label class="panel_label">1×2</label>
-                                    <img src="/images/image_panel_M_h.jpg">
+                                    <img src="/images/image_panel_M_h.jpg" name="4">
                                 </div>
 
                                 <div class="thumbnail" id="panel_M_var" style="width: 20%;">
                                     <label class="panel_label">2×1</label>
-                                    <img src="/images/image_panel_M_v.jpg">
+                                    <img src="/images/image_panel_M_v.jpg" name="3">
                                 </div>
 
                                 <div class="thumbnail" id="panel_S" style="width: 20%;">
                                     <label class="panel_label">1×1</label>
-                                    <img src="/images/image_panel_S.jpg">
+                                    <img src="/images/image_panel_S.jpg" name="5">
                                 </div>
 
                             </div>
