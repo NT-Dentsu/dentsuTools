@@ -1,6 +1,7 @@
 /**
  * 制作者：bot810
  * 制作日：2022/01/15
+ * 更新日：2022/02/26
  * 保存ボタンとキャンセルボタンのイベントを設定
  */
 
@@ -35,6 +36,9 @@ cancel.click(function () {
         // 変更を反映させる
         containerEnpty();
         pInfo.forEach(containerAppend);
+
+        // customize_panel.jsのpdataの値を更新
+        pdata = pInfo;
     });
 
 });
