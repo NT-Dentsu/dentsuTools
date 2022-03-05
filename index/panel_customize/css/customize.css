@@ -109,8 +109,10 @@
     height: auto!important;
     margin: 2.5%;
 }
+
 #preset .thumbnail img{
-    width: 100%;
+    width: 50%;
+    height: 50%;
 }
 
 

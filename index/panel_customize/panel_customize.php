@@ -85,19 +85,19 @@
                                 <h7>Preset Layout</h7>
 
                                 <div class="thumbnail" id="preset01">
-                                    <img src="./images/image02.jpg">
+                                    <img src="/images/preset01.png">
                                 </div>
 
                                 <div class="thumbnail" id="preset02">
-                                    <img src="./images/image02.jpg">
+                                    <img src="/images/preset02.png">
                                 </div>
 
                                 <div class="thumbnail" id="preset03">
-                                    <img src="./images/image02.jpg">
+                                    <img src="/images/preset03.png">
                                 </div>
 
                                 <div class="thumbnail" id="preset04">
-                                    <img src="./images/image02.jpg">
+                                    <img src="/images/preset04.png">
                                 </div>
                             </div>
                         </div>
