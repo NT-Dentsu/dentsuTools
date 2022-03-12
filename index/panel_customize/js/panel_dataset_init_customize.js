@@ -1,7 +1,7 @@
 /**
  * 制作者：bot810
  * 制作日：2021/07/22
- * 更新日：2022/01/15
+ * 更新日：2022/03/12
  * パネル関連の並びを定義
  * home画面とcoutomize画面で一部違いがあるため別ファイルとする
  */
@@ -18,6 +18,7 @@ let panelPromise = new Promise(function (resolve) {
 
 });
 
+// データベースから現在のユーザのパネルデータを読み込んみ，表示用に成型して返り値に渡す
 function panelInit() {
     // 同期処理
     return getUserPanels()
