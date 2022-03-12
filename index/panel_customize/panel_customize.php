@@ -157,6 +157,7 @@
 
     <!-- script -->
     <script src="./js/operate_paneldata.js"></script>
+    <script src="/common/js/get_presetdata.js"></script>
     <script src="./js/panel_class.js"></script>
     <script src="./js/panel_dataset_init_customize.js"></script>
     <script src="./js/panel_priset_layout.js"></script>
