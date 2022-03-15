@@ -27,15 +27,15 @@
         }
     </style>
 
-    <link rel="stylesheet" href="./user_icon/css/user_icon.css">
+    <link rel="stylesheet" href="/user_icon/css/user_icon.css">
     <!-- Custom styles for this template -->
-    <link href="./css/dashboard.css" rel="stylesheet">
+    <link href="/css/dashboard.css" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <!-- cssの読み込み -->
     <!-- <link href="./css/masonry.css" rel="stylesheet"> -->
-    <link href="./css/grid_layout.css" rel="stylesheet">
+    <link href="/css/grid_layout.css" rel="stylesheet">
 </head>
 
 <body>
@@ -98,13 +98,13 @@
 
 
     <!-- script -->
-    <script src="./js/operate_paneldata.js"></script>
-    <script src="./js/panel_class.js"></script>
-    <script src="./js/panel_dataset_init_home.js"></script>
-    <script src="./js/div_control.js"></script>
-    <script src="./js/settings.js"></script>
+    <script src="/js/operate_paneldata.js"></script>
+    <script src="/js/panel_class.js"></script>
+    <script src="/js/panel_dataset_init_home.js"></script>
+    <script src="/js/div_control.js"></script>
+    <script src="/js/settings.js"></script>
     <!-- サイドバー用のJavaScript -->
-    <script src="./common/js/sidebar.js"></script>
+    <script src="/common/js/sidebar.js"></script>
     <!-- <script src="./js/display_reflesh.js"></script> -->
 
 

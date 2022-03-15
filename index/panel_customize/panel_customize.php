@@ -7,7 +7,7 @@
     <title>Panel Customize</title>
 
     <!-- Custom styles for this template -->
-    <link href="./css/dashboard.css" rel="stylesheet">
+    <link href="/panel_customize/css/dashboard.css" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -15,8 +15,8 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css" rel="stylesheet">
     <!-- cssの読み込み -->
     <!-- <link href="./css/masonry.css" rel="stylesheet"> -->
-    <link href="./css/grid_layout.css" rel="stylesheet">
-    <link href="./css/customize.css" rel="stylesheet">
+    <link href="/panel_customize/css/grid_layout.css" rel="stylesheet">
+    <link href="/panel_customize/css/customize.css" rel="stylesheet">
 </head>
 
 <body>
@@ -156,18 +156,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js" type="text/javascript"></script>
 
     <!-- script -->
-    <script src="./js/operate_paneldata.js"></script>
-    <script src="./js/panel_class.js"></script>
-    <script src="./js/panel_dataset_init_customize.js"></script>
-    <script src="./js/panel_priset_layout.js"></script>
-    <script src="./js/settings.js"></script>
-    <script src="./js/div_control.js"></script>
+    <script src="/panel_customize/js/operate_paneldata.js"></script>
+    <script src="/panel_customize/js/panel_class.js"></script>
+    <script src="/panel_customize/js/panel_dataset_init_customize.js"></script>
+    <script src="/panel_customize/js/panel_priset_layout.js"></script>
+    <script src="/panel_customize/js/settings.js"></script>
+    <script src="/panel_customize/js/div_control.js"></script>
     <!-- <script src="./js/display_reflesh.js"></script> -->
-    <script src="./js/customize.js"></script>
+    <script src="/panel_customize/js/customize.js"></script>
     <!-- <script src="./js/sync.js"></script> -->
-    <script src="./js/btn_event.js"></script>
+    <script src="/panel_customize/js/btn_event.js"></script>
     <!-- サイドバー用のJavaScript -->
-    <script src="../common/js/sidebar.js"></script>
+    <script src="/common/js/sidebar.js"></script>
 </body>
 
 </html>
