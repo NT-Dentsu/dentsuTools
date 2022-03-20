@@ -1,7 +1,7 @@
 /*
  * 制作者：bot810
  * 制作日：2021/05/29
- * 更新日：2021/12/18
+ * 更新日：2022/02/02
  * カスタマイズ画面用css
  */
 
@@ -83,20 +83,38 @@
 	/* float: left; */
 	background: #eee;
     background-color: #eee;
-    width: 100%;
+    /* width: 100%; */
     min-height: 80%;
     height: fit-content;
 }
 
 /* 各メニューのCSS */
+/* パネル */
 #panel{
     flex-wrap: wrap;
 }
+#panel .thumbnail{
+    display: flex;
+    background-color:limegreen;
+    width: 40%;
+    height: auto;
+    margin: 2.5%;
+}
+#panel .thumbnail .panel_label{
+    width: 200px;
+    margin: 0 10% 0 0;
+}
+#panel .thumbnail img{
+    /* 画像は初期値でドラッグ可能 */
+    width: 100%;
+}
 
+/* コンテンツ */
 #contents{
     flex-wrap: wrap;
 }
 
+/* プリセット */
 #preset{
     /* display: flex; */
     flex-wrap: wrap;
@@ -105,8 +123,8 @@
 #preset .thumbnail{
     display: block;
     background-color: darkmagenta;
-    width: 50%!important; /* 優先度を最強にする */
-    height: auto!important;
+    width: 50%;
+    height: auto;
     margin: 2.5%;
 }
 

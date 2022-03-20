@@ -34,8 +34,14 @@
 /* panelを正方形にする用 */
 .panel-wrap {
     width: 100%;
-    padding-bottom: 100%;
+    /* padding-bottom: 100%; */
     margin: 0px;
+    z-index: 1;
+}
+.panel-wrap::before {
+    content: "";
+    display: block;
+    padding-top: 100%;
 }
 
 .panel {

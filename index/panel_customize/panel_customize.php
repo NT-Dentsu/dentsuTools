@@ -9,8 +9,7 @@
     <!-- Custom styles for this template -->
     <link href="/panel_customize/css/dashboard.css" rel="stylesheet">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <!-- Lightbox2 CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css" rel="stylesheet">
     <!-- cssの読み込み -->
@@ -31,8 +30,7 @@
 
             <!-- メイン部分 -->
             <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4" id="main">
-                <div
-                    class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                     <h1 class="h2">Panel Customize</h1>
                 </div>
 
@@ -50,10 +48,26 @@
                         <!-- 「id=”container”」という親要素（div 要素）内に配置した「class=”panel_wrap”」という要素（div 要素）を整列させる処理を行う -->
                         <div id="wrapper">
                             <div id="container">
-                                <!-- グリッドのサイズ調整用 -->
-                                <div class="panel-wrap"></div>
+                                <!-- グリッドのサイズ調整用兼ポジション取得用 -->
+                                <div class="panel-wrap" name="0" style="grid-area: 1 / 1;"></div>
+                                <div class="panel-wrap" name="1" style="grid-area: 1 / 2;"></div>
+                                <div class="panel-wrap" name="2" style="grid-area: 1 / 3;"></div>
+                                <div class="panel-wrap" name="3" style="grid-area: 1 / 4;"></div>
+                                <div class="panel-wrap" name="4" style="grid-area: 2 / 1;"></div>
+                                <div class="panel-wrap" name="5" style="grid-area: 2 / 2;"></div>
+                                <div class="panel-wrap" name="6" style="grid-area: 2 / 3;"></div>
+                                <div class="panel-wrap" name="7" style="grid-area: 2 / 4;"></div>
+                                <div class="panel-wrap" name="8" style="grid-area: 3 / 1;"></div>
+                                <div class="panel-wrap" name="9" style="grid-area: 3 / 2;"></div>
+                                <div class="panel-wrap" name="10" style="grid-area: 3 / 3;"></div>
+                                <div class="panel-wrap" name="11" style="grid-area: 3 / 4;"></div>
+                                <div class="panel-wrap" name="12" style="grid-area: 4 / 1;"></div>
+                                <div class="panel-wrap" name="13" style="grid-area: 4 / 2;"></div>
+                                <div class="panel-wrap" name="14" style="grid-area: 4 / 3;"></div>
+                                <div class="panel-wrap" name="15" style="grid-area: 4 / 4;"></div>
 
                                 <!-- ここにパネルが追加される -->
+
                             </div>
                         </div>
                     </div>
@@ -67,20 +81,49 @@
                         <h5>Customize Menu</h5>
 
                         <ul>
-                            <li><a href="panel_customize.php">Panel</a></li>
+                            <li><a id="panel_tab" href="panel_customize.php">Panel</a></li>
                             <li><a href="panel_customize.php">Contents</a></li>
                             <li><a href="panel_customize.php">Preset</a></li>
                         </ul>
 
                         <div>
+                            <!-- panelタブ -->
                             <div id="panel">
                                 <h7>Panel</h7>
+
+                                <!-- ここに各サイズのパネルを追加 -->
+                                <!-- パネルの種類は可変なのでjsで動的に設定する予定 -->
+
+                                <br>
+
+                                <div class="thumbnail" id="panel_L">
+                                    <label class="panel_label">4×4</label>
+                                    <img src="/images/image_panel_L.jpg" name="2">
+                                </div>
+
+                                <div class="thumbnail" id="panel_M_hol">
+                                    <label class="panel_label">1×2</label>
+                                    <img src="/images/image_panel_M_h.jpg" name="4">
+                                </div>
+
+                                <div class="thumbnail" id="panel_M_var" style="width: 20%;">
+                                    <label class="panel_label">2×1</label>
+                                    <img src="/images/image_panel_M_v.jpg" name="3">
+                                </div>
+
+                                <div class="thumbnail" id="panel_S" style="width: 20%;">
+                                    <label class="panel_label">1×1</label>
+                                    <img src="/images/image_panel_S.jpg" name="5">
+                                </div>
+
                             </div>
 
+                            <!-- contentsタブ -->
                             <div id="contents">
                                 <h7>Contents</h7>
                             </div>
 
+                            <!-- presetタブ -->
                             <div id="preset">
                                 <h7>Preset Layout</h7>
 
@@ -143,7 +186,7 @@
 
     <!-- cdn読み込み -->
     <!-- Masonry -->
-    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <!-- <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script> -->
     <!-- Feather Icons -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.28.0/feather.min.js"
         integrity="sha512-7x3zila4t2qNycrtZ31HO0NnJr8kg2VI67YLoRSyi9hGhRN66FHYWr7Axa9Y1J9tGYHVBPqIjSE1ogHrJTz51g=="
@@ -154,6 +197,12 @@
     <!-- <script src="https://unpkg.com/html2canvas@1.0.0-rc.7/dist/html2canvas.js"></script> -->
     <!-- Lightbox2 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js" type="text/javascript"></script>
+    <!-- jQuery UI -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+        integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+
 
     <!-- script -->
     <script src="/panel_customize/js/operate_paneldata.js"></script>
@@ -163,6 +212,7 @@
     <script src="/panel_customize/js/settings.js"></script>
     <script src="/panel_customize/js/div_control.js"></script>
     <!-- <script src="./js/display_reflesh.js"></script> -->
+    <script src="/panel_customize/js/customize_panel.js"></script>
     <script src="/panel_customize/js/customize.js"></script>
     <!-- <script src="./js/sync.js"></script> -->
     <script src="/panel_customize/js/btn_event.js"></script>
