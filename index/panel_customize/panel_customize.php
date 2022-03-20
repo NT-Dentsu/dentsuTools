@@ -205,6 +205,7 @@
 
 
     <!-- script -->
+    <script src="/common/js/get_presetdata.js"></script>
     <script src="/panel_customize/js/operate_paneldata.js"></script>
     <script src="/panel_customize/js/panel_class.js"></script>
     <script src="/panel_customize/js/panel_dataset_init_customize.js"></script>
