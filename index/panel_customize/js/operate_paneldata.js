@@ -32,3 +32,13 @@ function getPanelName() {
         dataType : 'json'
     });
 }
+
+// m_panelテーブルに格納されているデータをすべて取り出す関数
+// 戻り値JSONデータの形式:{status：実行結果のステータス, array：連想配列の配列}
+// 詳しくはget_mpanel_data.php内のコメントを参照
+function getMPanelData() {
+    return $.get({
+        url : "/panel_customize/php/get_mpanel_data.php",
+        dataType : 'json'
+    });
+}
