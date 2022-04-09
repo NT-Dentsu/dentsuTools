@@ -200,15 +200,17 @@
 
     <!-- script -->
     <script src="/common/js/get_presetdata.js"></script>
+    <script src="/panel_customize/js/global_variables.js"></script>
     <script src="/panel_customize/js/operate_paneldata.js"></script>
     <script src="/panel_customize/js/panel_class.js"></script>
-    <script src="/panel_customize/js/panel_dataset_init_customize.js"></script>
-    <script src="/panel_customize/js/panel_priset_layout.js"></script>
-    <script src="/panel_customize/js/settings.js"></script>
     <script src="/panel_customize/js/div_control.js"></script>
-    <script src="/panel_customize/js/customize_panel.js"></script>
+    <script src="/panel_customize/js/panel_dataset_init_customize.js"></script>
     <script src="/panel_customize/js/customize.js"></script>
+    <script src="/panel_customize/js/customize_preset.js"></script>
+    <script src="/panel_customize/js/customize_panel.js"></script>
+    <script src="/panel_customize/js/settings.js"></script>
     <script src="/panel_customize/js/btn_event.js"></script>
+    <script src="/panel_customize/js/event_onload.js"></script>
     <!-- サイドバー用のJavaScript -->
     <script src="/common/js/sidebar.js"></script>
 </body>
