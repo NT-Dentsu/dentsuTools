@@ -1,7 +1,7 @@
 /**
  * 制作者：bot810
  * 制作日：2022/01/15
- * 更新日：2022/02/26
+ * 更新日：2022/04/09
  * 保存ボタンとキャンセルボタンのイベントを設定
  */
 
@@ -18,7 +18,7 @@ update.click(function () {
 
     // データベースに変更を反映
     let dict = new Array()
-    panelInfo.forEach(info => {
+    global_panelInfo.forEach(info => {
         dict.push(info.data())
     });
     updateUserPanels(dict);
