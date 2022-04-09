@@ -1,7 +1,7 @@
 /**
  * 制作者：bot810
  * 制作日：2021/07/22
- * 更新日：2022/03/12
+ * 更新日：2022/04/09
  * パネル関連の並びを定義
  * home画面とcoutomize画面で一部違いがあるため別ファイルとする
  */
@@ -62,34 +62,4 @@ function panelPreset(presetID) {
         return panelInfo;
     });
 }
-
-// プリセットレイアウトの並びを定義
-// プリセット01
-let data01;
-new Promise((resolve) => {
-    resolve(panelPreset("preset001"));
-}).then((data) => {
-    data01 = data;
-});
-// プリセット02
-let data02;
-new Promise((resolve) => {
-    resolve(panelPreset("preset002"));
-}).then((data) => {
-    data02 = data;
-});
-// プリセット03
-let data03;
-new Promise((resolve) => {
-    resolve(panelPreset("preset003"));
-}).then((data) => {
-    data03 = data;
-});
-// プリセット04
-let data04;
-new Promise((resolve) => {
-    resolve(panelPreset("preset004"));
-}).then((data) => {
-    data04 = data;
-});
 
