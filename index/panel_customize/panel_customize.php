@@ -214,7 +214,6 @@
     <script src="/panel_customize/js/div_control.js"></script>
     <script src="/panel_customize/js/customize_panel.js"></script>
     <script src="/panel_customize/js/customize.js"></script>
-    <!-- <script src="./js/sync.js"></script> -->
     <script src="/panel_customize/js/btn_event.js"></script>
     <!-- サイドバー用のJavaScript -->
     <script src="/common/js/sidebar.js"></script>
