@@ -212,7 +212,6 @@
     <script src="/panel_customize/js/panel_priset_layout.js"></script>
     <script src="/panel_customize/js/settings.js"></script>
     <script src="/panel_customize/js/div_control.js"></script>
-    <!-- <script src="./js/display_reflesh.js"></script> -->
     <script src="/panel_customize/js/customize_panel.js"></script>
     <script src="/panel_customize/js/customize.js"></script>
     <!-- <script src="./js/sync.js"></script> -->
