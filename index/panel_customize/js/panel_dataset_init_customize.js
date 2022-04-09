@@ -7,16 +7,6 @@
  */
 
 
-// 初期値定義
-// home画面ではそのまま定義
-// costomize画面ではhome画面の値を利用
-
-// div_controlでの同期処理のためにPromise使う
-let panelPromise = new Promise(function (resolve) {
-
-    resolve(panelInit());
-
-});
 
 // データベースから現在のユーザのパネルデータを読み込んみ，表示用に成型して返り値に渡す
 function panelInit() {
