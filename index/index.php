@@ -1,5 +1,5 @@
 <?php
-    require_once __DIR__ . '/common/user_session.php';
+    require_once $_SERVER['DOCUMENT_ROOT'] . '/common/php/user_session.php';
     user_session_start();
 ?>
 <!doctype html>
@@ -52,12 +52,12 @@
         crossorigin="anonymous"></script>
 
     <!-- タイトルバー -->
-    <?php require_once __DIR__ . '/common/titlebar.php'; ?>
+    <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/common/php/titlebar.php'; ?>
 
     <div class="container-fluid">
         <div class="row">
             <!-- サイドバー -->
-            <?php require_once __DIR__ . '/common/sidebar.php'; ?>
+            <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/common/php/sidebar.php'; ?>
             <!-- メイン部分 -->
             <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4" id="main">
                 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">

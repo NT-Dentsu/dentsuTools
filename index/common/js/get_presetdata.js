@@ -4,7 +4,7 @@
 // {"panel_name" : <String>, "anchor_num" : <int>, "panel_size" : <int>, "content_link" : <String>, "content_image" : <String>}
 function get_presetdata(preset_id) {
     return $.post({
-        url : "/common/get_presetdata.php",
+        url : "/common/php/get_presetdata.php",
         dataType : 'json',
         data :{
             "preset_id" : preset_id

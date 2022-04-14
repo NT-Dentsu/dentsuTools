@@ -1,6 +1,6 @@
 <?php
     // 自身のディレクトリからの絶対パスを指定する
-    require_once __DIR__ . '/../../common/user_session.php';
+    require_once $_SERVER['DOCUMENT_ROOT'] . '/common/php/user_session.php';
     // ヘッダー情報の明記
     header('Content-Type: application/json; charset=UTF-8');
 

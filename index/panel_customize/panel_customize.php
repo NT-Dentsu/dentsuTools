@@ -20,13 +20,13 @@
 
 <body>
     <!-- タイトルバー -->
-    <?php require_once __DIR__ . '/../common/titlebar.php'; ?>
+    <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/common/php/titlebar.php'; ?>
 
     <div class="container-fluid">
         <!-- 横の部分 -->
         <div class="row">
             <!-- サイドバー -->
-            <?php require_once __DIR__ . '/../common/sidebar.php'; ?>
+            <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/common/php/sidebar.php'; ?>
 
             <!-- メイン部分 -->
             <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4" id="main">

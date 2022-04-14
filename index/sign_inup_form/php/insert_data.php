@@ -6,11 +6,11 @@
     header("Content-Type: application/json; charset=UTF-8");
 
     // データベース共通クラスの読み込み
-    require_once __DIR__ . '/../../common/dbaccess.php';
+    require_once $_SERVER['DOCUMENT_ROOT'] . '/common/php/dbaccess.php';
     // パスワードハッシュ値生成に使う関数の読み込み
-    require_once __DIR__ . '/../../common/password_hash.php';
+    require_once $_SERVER['DOCUMENT_ROOT'] . '/common/php/password_hash.php';
     // 入力チェック関数の読み込み
-    require_once __DIR__ . '/input_check.php';
+    require_once $_SERVER['DOCUMENT_ROOT'] . '/sign_inup_form/php/input_check.php';
 
     // アンカー番号の範囲
     const ANCHORNUM_START = 0;
