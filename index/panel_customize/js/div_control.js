@@ -1,23 +1,13 @@
 /**
  * 制作者：bot810
- * 更新日：2022/01/15
- * div要素の追加，変更をする．
+ * 更新日：2022/04/09
+ * div要素の追加，変更をする関数を定義．
  */
 
 //div要素の追加先id取得
 let panelParentId = $('#container');
 
 let text;
-
-// panelInfoはpanel_dataset_costomize.jsで定義されている
-// イベントを使ってクリック時の動作を制御する
-// イベント設定のためname属性にpanelを指定
-// let panelInfo = new Array()
-panelPromise.then((data) => {
-    console.log(data);
-    data.forEach(containerAppend);
-    // panelInfo = data;
-});
 
 // conttainerに子要素を追加する
 function containerAppend(info){

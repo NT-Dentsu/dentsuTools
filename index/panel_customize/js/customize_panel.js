@@ -1,7 +1,7 @@
 /**
  * 作成者：bot810
  * 作成日:2022/01/29
- * 更新日:2022/02/26
+ * 更新日:2022/04/09
  * カスタマイズ画面のパネルタブ用js
  * パネルの配置とかレイアウトの変更とかする
  */
@@ -51,21 +51,6 @@ function makeIndex(data) {
 // dataをもとに4*4の範囲のパネル分布を配列として管理
 let pdata; // 更新処理用
 let pdataIndex = new Array();
-$(window).on("load", function () {
-    new Promise(function (resolve) {
-        resolve(panelInit()); // ここでデータベースから読み込み
-    })
-    .then((data) => {
-        pdata = data;
-        // データベースから受け取ったパネル情報をpdataIndexに代入
-        pdataIndex = makeIndex(pdata);
-    })
-    .then(()=>{
-        // 現在のパネル情報を表示
-        console.log(pdataIndex);
-    });
-});
-
 
 
 // panelタブに各種パネルを表示する処理
@@ -210,10 +195,10 @@ dragimg.on("dragstop", function(event, ui){
     pdata.push(addPanel);
 
     // パネルレイアウトを変更後のものにする
-    panelInfo = pdata;
+    global_panelInfo = pdata;
     // 変更を反映させる
     containerEnpty();
-    panelInfo.forEach(containerAppend);
+    global_panelInfo.forEach(containerAppend);
 
 });
 

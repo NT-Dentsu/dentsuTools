@@ -105,7 +105,6 @@
     <script src="/js/settings.js"></script>
     <!-- サイドバー用のJavaScript -->
     <script src="/common/js/sidebar.js"></script>
-    <!-- <script src="./js/display_reflesh.js"></script> -->
 
 
 </body>

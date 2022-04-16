@@ -185,16 +185,10 @@
 
 
     <!-- cdn読み込み -->
-    <!-- Masonry -->
-    <!-- <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script> -->
     <!-- Feather Icons -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.28.0/feather.min.js"
         integrity="sha512-7x3zila4t2qNycrtZ31HO0NnJr8kg2VI67YLoRSyi9hGhRN66FHYWr7Axa9Y1J9tGYHVBPqIjSE1ogHrJTz51g=="
         crossorigin="anonymous"></script>
-    <!-- html2canvas -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.5/dist/html2canvas.min.js"></script>
-    <!-- <script src="https://unpkg.com/html2canvas@1.0.0-rc.7/dist/html2canvas.js"></script> -->
     <!-- Lightbox2 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js" type="text/javascript"></script>
     <!-- jQuery UI -->
@@ -206,17 +200,17 @@
 
     <!-- script -->
     <script src="/common/js/get_presetdata.js"></script>
+    <script src="/panel_customize/js/global_variables.js"></script>
     <script src="/panel_customize/js/operate_paneldata.js"></script>
     <script src="/panel_customize/js/panel_class.js"></script>
-    <script src="/panel_customize/js/panel_dataset_init_customize.js"></script>
-    <script src="/panel_customize/js/panel_priset_layout.js"></script>
-    <script src="/panel_customize/js/settings.js"></script>
     <script src="/panel_customize/js/div_control.js"></script>
-    <!-- <script src="./js/display_reflesh.js"></script> -->
-    <script src="/panel_customize/js/customize_panel.js"></script>
+    <script src="/panel_customize/js/panel_dataset_init_customize.js"></script>
     <script src="/panel_customize/js/customize.js"></script>
-    <!-- <script src="./js/sync.js"></script> -->
+    <script src="/panel_customize/js/customize_preset.js"></script>
+    <script src="/panel_customize/js/customize_panel.js"></script>
+    <script src="/panel_customize/js/settings.js"></script>
     <script src="/panel_customize/js/btn_event.js"></script>
+    <script src="/panel_customize/js/event_onload.js"></script>
     <!-- サイドバー用のJavaScript -->
     <script src="/common/js/sidebar.js"></script>
 </body>
