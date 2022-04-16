@@ -81,9 +81,9 @@
                         <h5>Customize Menu</h5>
 
                         <ul>
-                            <li><a id="panel_tab" href="panel_customize.php">Panel</a></li>
-                            <li><a href="panel_customize.php">Contents</a></li>
-                            <li><a href="panel_customize.php">Preset</a></li>
+                            <li><a id="panel_tab" href="/panel_customize/panel_customize.php">Panel</a></li>
+                            <li><a href="/panel_customize/panel_customize.php">Contents</a></li>
+                            <li><a href="/panel_customize/panel_customize.php">Preset</a></li>
                         </ul>
 
                         <div>
