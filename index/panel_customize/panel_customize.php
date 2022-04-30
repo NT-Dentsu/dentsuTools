@@ -82,8 +82,8 @@
 
                         <ul>
                             <li><a id="panel_tab" href="panel_customize.php">Panel</a></li>
-                            <li><a href="panel_customize.php">Contents</a></li>
-                            <li><a href="panel_customize.php">Preset</a></li>
+                            <li><a id="contents_tab" href="panel_customize.php">Contents</a></li>
+                            <li><a id="preset_tab" href="panel_customize.php">Preset</a></li>
                         </ul>
 
                         <div>
@@ -121,6 +121,9 @@
                             <!-- contentsタブ -->
                             <div id="contents">
                                 <h7>Contents</h7>
+                                <div>
+                                    <!-- ここにコンテンツ選択の諸々が表示される -->
+                                </div>
                             </div>
 
                             <!-- presetタブ -->
@@ -207,6 +210,7 @@
     <script src="/panel_customize/js/panel_dataset_init_customize.js"></script>
     <script src="/panel_customize/js/customize.js"></script>
     <script src="/panel_customize/js/customize_preset.js"></script>
+    <script src="/panel_customize/js/customize_contents.js"></script>
     <script src="/panel_customize/js/customize_panel.js"></script>
     <script src="/panel_customize/js/settings.js"></script>
     <script src="/panel_customize/js/btn_event.js"></script>
