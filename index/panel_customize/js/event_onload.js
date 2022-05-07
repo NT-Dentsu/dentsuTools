@@ -8,6 +8,7 @@
 
 // 画面読み込み時に動作
 $(window).on("load", function () {
+
     new Promise(function (resolve) {
         resolve(panelInit()); // ここでデータベースから読み込み
     })
@@ -56,5 +57,15 @@ $(window).on("load", function () {
     }).then((data) => {
         global_preset004 = data;
     });
+
+
+    // パネルマスタ情報を取得
+    new Promise((resolve) => {
+        resolve(getMPanelData());
+    })
+    .then((data) => {
+        global_panelMaster = data.array;
+    });
+
 
 });
