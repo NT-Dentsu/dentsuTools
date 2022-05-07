@@ -1,6 +1,6 @@
 /**
  * 制作者：bot810
- * 更新日：2022/04/09
+ * 更新日：2022/05/07
  * div要素の追加，変更をする関数を定義．
  */
 
@@ -13,7 +13,7 @@ let text;
 function containerAppend(info){
     text = `
     <div class="${info.className}" style="grid-area: ${info.gridSize};">
-        <img src="${info.iamgeLink}" alt="" class="panelImg">
+        <img src="${info.imageLink}" alt="" class="panelImg">
     </div>
     `;
 

@@ -21,7 +21,7 @@ class PanelInfo {
         this.panelName = name;
         this.pos = pos;
         this.size = size; // 符号なし。5：小(1/8サイズ)、4：中(1/4サイズ(横))、3：中(1/4サイズ(縦))、2：大(1/2サイズ)
-        this.iamgeLink = img;
+        this.imageLink = img;
         this.toolLink = tool;
 
         // 位置，サイズ，クラス名のパラメータ設定
