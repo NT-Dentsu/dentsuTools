@@ -13,13 +13,19 @@ function comp(a, b){
 }
 
 // プルダウンメニューの中身を設定する関数
-function pulldown() {
-    // いまはとりあえず適当な文字列を返す
-    return `
-    <option value="orange">Orange</option>
-    <option value="lemon" selected>Lemon</option>
-    <option value="strawberry">Strawberry</option>
-    `;
+function pulldown(panelName) {
+    // データベースから読み込んだ値を設定
+    let text = "";
+    global_panelMaster.forEach((data) => {
+        // panelNameによってselectedを設定
+        if(data.panel_name == panelName){
+            text += `<option value="${data.panel_name}" selected>${data.panel_name}</option>\n`;
+        }else{
+            text += `<option value="${data.panel_name}">${data.panel_name}</option>\n`;
+        }
+    });
+
+    return text;
 }
 
 
@@ -46,14 +52,17 @@ $("#contents_tab").click(function () {
     let panelInfoCopy = global_panelInfo.slice();
 
     // プルダウンメニューを設定
-    panelInfoCopy.sort(comp).forEach(info => {
+    panelInfoCopy.sort(comp).forEach(data => {
         let num = ('00' + panelNum).slice(-2); // ゼロパディングして2桁に揃える
         let text = `
         <label for="contents_panel${num}">パネル${num}</label>
-        <select id="contents_panel${num}">
-            <!-- プルダウンメニューの中身は共通 -->
-            ${pulldown()}
+        <select id="contents_panel${num}" data-name="${data.panelName}" data-pos="${data.pos}">
+            <!-- プルダウンメニューの中身は大体共通 -->
+            ${pulldown(data.panelName)}
         </select>
+
+        <input type="button" value="Set" class="contents_set_button" id="contents_set${num}" name="${num}">
+
         <br>
         `;
 
