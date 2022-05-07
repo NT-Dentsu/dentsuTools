@@ -1,7 +1,7 @@
 /**
  * 作成者：bot810
  * 作成日：2022/04/15
- * 更新日：
+ * 更新日：2022/05/07
  * 概要：パネルカスタマイズ画面のcontentsタブでの動作を設定
  */
 
@@ -71,5 +71,32 @@ $("#contents_tab").click(function () {
         panelNum++;
     });
 
+
+});
+
+
+// setボタンクリック時の動作
+// 動的な要素に対応するためon()メソッド使用
+$("#contents div").on("click", ".contents_set_button", function () {// アローだと上手く動かない(thisが使えない)
+    // 動作確認
+    let selectId = "#contents_panel" + $(this).attr("name");
+    console.log($(this).attr("id") + " " + $(selectId).val());
+
+    //console.log(global_panelMaster);
+    //console.log($(selectId).attr("name"));
+
+    // 任意属性によって必要な情報を取得
+    // 参考サイト：https://engineering.dn-voice.info/prg-tips/htmlcss/customdata/
+
+    // 選択されたパネル情報取得
+    let selectPanel = global_panelMaster.find(({panel_name}) => panel_name === $(selectId).val());
+    console.log(selectPanel);
+
+    // 対象パネルの値を変更
+    global_panelInfo.find(({pos}) => pos === $(selectId).data("pos")).setContent(selectPanel);
+
+    // 変更を反映させる
+    containerEnpty();
+    global_panelInfo.forEach(containerAppend);
 
 });
