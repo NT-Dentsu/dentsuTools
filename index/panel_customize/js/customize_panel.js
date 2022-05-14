@@ -62,7 +62,10 @@ panelTab.click(function(){
     console.log("panel Tab click");
     // console.log(pdata);
 
-    // 何かしらの何か
+    // 変数の情報を設定
+    pdata = Array.from(global_panelInfo); // ディープコピー
+    // データベースから受け取ったパネル情報をpdataIndexに代入
+    pdataIndex = makeIndex(pdata);
 
 });
 
