@@ -1,7 +1,7 @@
 /**
  * 作成者：bot810
  * 作成日:2022/01/29
- * 更新日:2022/04/09
+ * 更新日:2022/05/14
  * カスタマイズ画面のパネルタブ用js
  * パネルの配置とかレイアウトの変更とかする
  */
@@ -104,7 +104,8 @@ dragimg.draggable({
 dragimg.on("dragstart", function(event, ui){
     console.log("start event start");
     ui.helper.css('width', '10%');
-    // pdata = panelInfo;
+    // pdata更新
+    pdata = Array.from(global_panelInfo); // ディープコピー
     // pdataIndex更新
     pdataIndex = makeIndex(pdata);
 });
@@ -198,7 +199,7 @@ dragimg.on("dragstop", function(event, ui){
     pdata.push(addPanel);
 
     // パネルレイアウトを変更後のものにする
-    global_panelInfo = pdata;
+    global_panelInfo = Array.from(pdata); // ディープコピー
     // 変更を反映させる
     containerEnpty();
     global_panelInfo.forEach(containerAppend);
