@@ -96,6 +96,7 @@
 
     <!-- script -->
     <script src="/common/js/operate_paneldata.js"></script>
+    <script src="/common/js/panel_class.js"></script>
     <!-- サイドバー用のJavaScript -->
     <script src="/common/js/sidebar.js"></script>
 
