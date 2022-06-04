@@ -213,7 +213,7 @@
     <script src="/panel_customize/js/customize_panel.js"></script>
     <script src="/common/js/settings.js"></script>
     <script src="/panel_customize/js/btn_event.js"></script>
-    <script src="/panel_customize/js/event_onload.js"></script>
+    <script src="/panel_customize/js/event_onload_customize.js"></script>
     <!-- サイドバー用のJavaScript -->
     <script src="/common/js/sidebar.js"></script>
 </body>
