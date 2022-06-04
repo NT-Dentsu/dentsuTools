@@ -206,7 +206,7 @@
     <script src="/common/js/operate_paneldata.js"></script>
     <script src="/common/js/panel_class.js"></script>
     <script src="/panel_customize/js/div_control.js"></script>
-    <script src="/panel_customize/js/panel_dataset_init_customize.js"></script>
+    <script src="/common/js/panel_dataset_init.js"></script>
     <script src="/panel_customize/js/customize.js"></script>
     <script src="/panel_customize/js/customize_preset.js"></script>
     <script src="/panel_customize/js/customize_contents.js"></script>
