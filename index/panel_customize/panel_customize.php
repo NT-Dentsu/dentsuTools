@@ -13,8 +13,7 @@
     <!-- Lightbox2 CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css" rel="stylesheet">
     <!-- cssの読み込み -->
-    <!-- <link href="./css/masonry.css" rel="stylesheet"> -->
-    <link href="/panel_customize/css/grid_layout.css" rel="stylesheet">
+    <link href="/common/css/grid_layout.css" rel="stylesheet">
     <link href="/panel_customize/css/customize.css" rel="stylesheet">
 </head>
 
