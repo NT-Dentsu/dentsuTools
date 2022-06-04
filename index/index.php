@@ -99,6 +99,7 @@
     <script src="/common/js/panel_class.js"></script>
     <script src="/common/js/panel_dataset_init.js"></script>
     <script src="/common/js/div_control.js"></script>
+    <script src="/common/js/settings.js"></script>
     <!-- サイドバー用のJavaScript -->
     <script src="/common/js/sidebar.js"></script>
 
