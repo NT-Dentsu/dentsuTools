@@ -205,7 +205,7 @@
     <script src="/panel_customize/js/global_variables.js"></script>
     <script src="/common/js/operate_paneldata.js"></script>
     <script src="/common/js/panel_class.js"></script>
-    <script src="/panel_customize/js/div_control.js"></script>
+    <script src="/common/js/div_control.js"></script>
     <script src="/common/js/panel_dataset_init.js"></script>
     <script src="/panel_customize/js/customize.js"></script>
     <script src="/panel_customize/js/customize_preset.js"></script>
