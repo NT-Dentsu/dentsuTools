@@ -7,7 +7,7 @@
     // アップロード先のパス
     const UPLOAD_PATH = '/content/user_icon';
     // ユーザーアイコンの拡張子のパターン(iを付けることで大文字小文字を区別しない)
-    const PATTERN_USER_ICON = '/.jtif$|.pjpeg$|.jepg$|.pjp$|.jpg$|.png$/i';
+    const PATTERN_USER_ICON = '/.jtif$|.pjpeg$|.jpeg$|.pjp$|.jpg$|.png$/i';
     // ユーザー名のパターン
     const PATTERN_USER_NAME = '/^[a-z,A-Z,\-,\d]{1,20}$/';
     // パスワードのパターン
