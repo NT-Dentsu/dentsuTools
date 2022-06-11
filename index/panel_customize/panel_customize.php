@@ -20,13 +20,13 @@
 
 <body>
     <!-- タイトルバー -->
-    <?php require_once __DIR__ . '/../common/titlebar.php'; ?>
+    <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/common/php/titlebar.php'; ?>
 
     <div class="container-fluid">
         <!-- 横の部分 -->
         <div class="row">
             <!-- サイドバー -->
-            <?php require_once __DIR__ . '/../common/sidebar.php'; ?>
+            <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/common/php/sidebar.php'; ?>
 
             <!-- メイン部分 -->
             <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4" id="main">
@@ -81,9 +81,9 @@
                         <h5>Customize Menu</h5>
 
                         <ul>
-                            <li><a id="panel_tab" href="panel_customize.php">Panel</a></li>
-                            <li><a href="panel_customize.php">Contents</a></li>
-                            <li><a href="panel_customize.php">Preset</a></li>
+                            <li><a id="panel_tab" href="/panel_customize/panel_customize.php">Panel</a></li>
+                            <li><a href="/panel_customize/panel_customize.php">Contents</a></li>
+                            <li><a href="/panel_customize/panel_customize.php">Preset</a></li>
                         </ul>
 
                         <div>

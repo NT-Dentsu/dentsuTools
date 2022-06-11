@@ -12,7 +12,7 @@
     <ul class="navbar-nav px-3">
         <li class="nav-item text-nowrap">
             <!-- ユーザーアイコン -->
-            <?php include("./user_icon/user_icon.php") ?>
+            <?php include($_SERVER['DOCUMENT_ROOT'] . "/user_icon/user_icon.php") ?>
         </li>
     </ul>
 </nav>
