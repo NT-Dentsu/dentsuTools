@@ -1,5 +1,5 @@
 <?php
-    require_once __DIR__ . '/../../common/dbaccess.php';
+    require_once $_SERVER['DOCUMENT_ROOT'] . '/common/php/dbaccess.php';
     //ヘッダー情報の明記。必須。
     header("Content-Type: application/json; charset=UTF-8");
 

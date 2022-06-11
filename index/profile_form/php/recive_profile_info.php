@@ -1,8 +1,8 @@
 <?php
     // 自身のディレクトリからの絶対パスを指定する
-    require_once __DIR__ . '/../../common/dbaccess.php';
-    require_once __DIR__ . '/../../common/user_session.php';
-    require_once __DIR__ . '/../../common/password_hash.php';
+    require_once $_SERVER['DOCUMENT_ROOT'] . '/common/php/dbaccess.php';
+    require_once $_SERVER['DOCUMENT_ROOT'] . '/common/php/user_session.php';
+    require_once $_SERVER['DOCUMENT_ROOT'] . '/common/php/password_hash.php';
 
     // アップロード先のパス
     const UPLOAD_PATH = '/content/user_icon';
