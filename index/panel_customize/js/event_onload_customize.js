@@ -17,7 +17,7 @@ $(window).on("load", function () {
         // div_control.jsで使用する変数にもなる
         global_panelInfo = data;
         console.log(global_panelInfo);
-        global_panelInfo.forEach(containerAppend);
+        global_panelInfo.forEach(containerAppend.bind(false));
 
         // customize_panel.jsで使用する変数を設定
         // 本来ならこれもグローバル化するべきだが，1つのファイルでしか使用していない & 変更部分が多くなるので保留

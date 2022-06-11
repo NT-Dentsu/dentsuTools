@@ -1,6 +1,7 @@
 /*
  * 制作者：bot810
  * 制作日：2021/11/27
+ * 更新日：2022/06/10
  * パネルの整列方法をMasonryからグリッドレイアウトへ変更
  */
 
@@ -56,6 +57,7 @@
     height: 100%;
     position: absolute;
     box-sizing: border-box;
+	z-index: 10;
 }
 
 .panel.S{

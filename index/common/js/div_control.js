@@ -1,6 +1,7 @@
 /**
  * 制作者：bot810
- * 更新日：2022/05/07
+ * 作成日：2022/06/04
+ * 更新日：
  * div要素の追加，変更をする関数を定義．
  */
 
@@ -10,18 +11,30 @@ let panelParentId = $('#container');
 let text;
 
 // conttainerに子要素を追加する
-function containerAppend(info){
-    text = `
-    <div class="${info.className}" style="grid-area: ${info.gridSize};">
-        <img src="${info.imageLink}" alt="" class="panelImg">
-    </div>
-    `;
+function containerAppend(info) {
+
+    // フラグによってコンテンツリンクの有無を変更
+    if(this == true){ // フラグがTrue
+        text = `
+        <div class="${info.className}" style="grid-area: ${info.gridSize};">
+            <a href="${info.toolLink}">
+                <img src="${info.imageLink}" alt="">
+            </a>
+        </div>
+        `;
+    }else{ // フラグがfalse
+        text = `
+        <div class="${info.className}" style="grid-area: ${info.gridSize};">
+            <img src="${info.imageLink}" alt="" class="panelImg">
+        </div>
+        `;
+    }
 
     panelParentId.append(text);
 }
 
 // containerの子要素を消す(更新処理用)
-function containerEnpty(){
+function containerEnpty() {
     // 子要素消去
     panelParentId.empty();
 
