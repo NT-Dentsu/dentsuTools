@@ -1,7 +1,7 @@
 /**
  * 制作者：bot810
  * 制作日：2022/01/15
- * 更新日：2022/04/09
+ * 更新日：2022/05/14
  * 保存ボタンとキャンセルボタンのイベントを設定
  */
 
@@ -15,6 +15,8 @@ let cancel = $("[name='cancel']");
 // 保存ボタン
 update.click(function () {
     alert("update");
+
+    //console.log(global_panelInfo);
 
     // データベースに変更を反映
     let dict = new Array()
