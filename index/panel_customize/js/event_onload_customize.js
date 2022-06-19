@@ -1,7 +1,7 @@
 /**
  * 制作者：bot810
  * 制作日：2022/04/09
- * 更新日：
+ * 更新日：2022/05/14
  * 概要：onloadイベントを定義する(onloadイベントは一つにまとめた方が良いらしいので)
  */
 
@@ -15,13 +15,13 @@ $(window).on("load", function () {
     .then((data) => {
         // パネル配置記憶用の変数にデータ格納
         // div_control.jsで使用する変数にもなる
-        global_panelInfo = data;
+        global_panelInfo = Array.from(data); // ディープコピー
         console.log(global_panelInfo);
         global_panelInfo.forEach(containerAppend.bind(false));
 
         // customize_panel.jsで使用する変数を設定
         // 本来ならこれもグローバル化するべきだが，1つのファイルでしか使用していない & 変更部分が多くなるので保留
-        pdata = data;
+        pdata = Array.from(data); // ディープコピー
         // データベースから受け取ったパネル情報をpdataIndexに代入
         pdataIndex = makeIndex(pdata);
 

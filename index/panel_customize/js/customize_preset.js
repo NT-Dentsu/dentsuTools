@@ -1,7 +1,7 @@
 /**
  * 制作者：bot810
  * 制作日：2021/07/03
- * 最終更新日：2022/04/09
+ * 最終更新日：2022/05/14
  * パネルのプリセットレイアウトの並び順を設定するイベントを定義
  */
 
@@ -36,7 +36,7 @@ preset01.addEventListener('click', function (e) {
         //     -> シングルクリックだった
 
         // パネルレイアウトをプリセット1のレイアウトにする
-        global_panelInfo = global_preset001;
+        global_panelInfo = Array.from(global_preset001); // ディープコピー
         if (clickFlag == "panel01") {
             alert("panel01 single click!");
 
@@ -67,7 +67,7 @@ preset02.addEventListener('click', function (e) {
         //     -> シングルクリックだった
 
         // パネルレイアウトをプリセット2のレイアウトにする
-        global_panelInfo = global_preset002;
+        global_panelInfo = Array.from(global_preset002); // ディープコピー
         if (clickFlag == "panel02") {
             alert("panel02 single click!");
 
@@ -98,7 +98,7 @@ preset03.addEventListener('click', function (e) {
         //     -> シングルクリックだった
 
         // パネルレイアウトをプリセット3のレイアウトにする
-        global_panelInfo = global_preset003;
+        global_panelInfo = Array.from(global_preset003); // ディープコピー
         if (clickFlag == "panel03") {
             alert("panel03 single click!");
 
@@ -129,7 +129,7 @@ preset04.addEventListener('click', function (e) {
         //     -> シングルクリックだった
 
         // パネルレイアウトをプリセット4のレイアウトにする
-        global_panelInfo = global_preset004;
+        global_panelInfo = Array.from(global_preset004); // ディープコピー
         if (clickFlag == "panel04") {
             alert("panel04 single click!");
 
