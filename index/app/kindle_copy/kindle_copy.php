@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Kindle Copy</title>
+    <link rel="stylesheet" href="/user_icon/css/user_icon.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="/app/kindle_copy.css">
     <link rel="stylesheet" href="/css/dashboard.css">

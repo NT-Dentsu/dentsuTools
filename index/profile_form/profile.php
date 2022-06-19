@@ -10,6 +10,7 @@
 
     <title>NT-Dentsu</title>
 
+    <link rel="stylesheet" href="/user_icon/css/user_icon.css">
     <link rel="stylesheet" href="/profile_form/css/profile.css">
     <!-- Custom styles for this template -->
     <link rel="stylesheet" href="/css/dashboard.css" >

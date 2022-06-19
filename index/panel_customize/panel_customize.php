@@ -6,6 +6,7 @@
 
     <title>Panel Customize</title>
 
+    <link rel="stylesheet" href="/user_icon/css/user_icon.css">
     <!-- Custom styles for this template -->
     <link href="/common/css/dashboard.css" rel="stylesheet">
     <!-- Bootstrap CSS -->
