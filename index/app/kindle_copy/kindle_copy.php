@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Kindle Copy</title>
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="/app/kindle_copy.css">
+    <link rel="stylesheet" href="/app/kindle_copy/kindle_copy.css">
     <link rel="stylesheet" href="/css/dashboard.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -63,7 +63,7 @@
         integrity="sha512-7x3zila4t2qNycrtZ31HO0NnJr8kg2VI67YLoRSyi9hGhRN66FHYWr7Axa9Y1J9tGYHVBPqIjSE1ogHrJTz51g=="
         crossorigin="anonymous"></script>
     <script src="/js/settings.js"></script>
-    <script src="/app/kindle_copy.js"></script>
+    <script src="/app/kindle_copy/kindle_copy.js"></script>
 </body>
 
 </html>
