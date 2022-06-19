@@ -29,13 +29,12 @@
 
     <link rel="stylesheet" href="/user_icon/css/user_icon.css">
     <!-- Custom styles for this template -->
-    <link href="/css/dashboard.css" rel="stylesheet">
+    <link href="/common/css/dashboard.css" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <!-- cssの読み込み -->
-    <!-- <link href="./css/masonry.css" rel="stylesheet"> -->
-    <link href="/css/grid_layout.css" rel="stylesheet">
+    <link href="/common/css/grid_layout.css" rel="stylesheet">
 </head>
 
 <body>
@@ -89,8 +88,6 @@
 
 
     <!-- cdn読み込み -->
-    <!-- Masonry -->
-    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
     <!-- Feather Icons -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.28.0/feather.min.js"
         integrity="sha512-7x3zila4t2qNycrtZ31HO0NnJr8kg2VI67YLoRSyi9hGhRN66FHYWr7Axa9Y1J9tGYHVBPqIjSE1ogHrJTz51g=="
@@ -98,11 +95,12 @@
 
 
     <!-- script -->
-    <script src="/js/operate_paneldata.js"></script>
-    <script src="/js/panel_class.js"></script>
-    <script src="/js/panel_dataset_init_home.js"></script>
-    <script src="/js/div_control.js"></script>
-    <script src="/js/settings.js"></script>
+    <script src="/common/js/operate_paneldata.js"></script>
+    <script src="/common/js/panel_class.js"></script>
+    <script src="/common/js/panel_dataset_init.js"></script>
+    <script src="/common/js/div_control.js"></script>
+    <script src="/js/event_onload_home.js"></script>
+    <script src="/common/js/settings.js"></script>
     <!-- サイドバー用のJavaScript -->
     <script src="/common/js/sidebar.js"></script>
 

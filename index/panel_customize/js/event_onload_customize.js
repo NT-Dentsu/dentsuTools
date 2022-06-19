@@ -8,6 +8,7 @@
 
 // 画面読み込み時に動作
 $(window).on("load", function () {
+
     new Promise(function (resolve) {
         resolve(panelInit()); // ここでデータベースから読み込み
     })
@@ -16,7 +17,7 @@ $(window).on("load", function () {
         // div_control.jsで使用する変数にもなる
         global_panelInfo = Array.from(data); // ディープコピー
         console.log(global_panelInfo);
-        global_panelInfo.forEach(containerAppend);
+        global_panelInfo.forEach(containerAppend.bind(false));
 
         // customize_panel.jsで使用する変数を設定
         // 本来ならこれもグローバル化するべきだが，1つのファイルでしか使用していない & 変更部分が多くなるので保留
@@ -56,5 +57,15 @@ $(window).on("load", function () {
     }).then((data) => {
         global_preset004 = data;
     });
+
+
+    // パネルマスタ情報を取得
+    new Promise((resolve) => {
+        resolve(getMPanelData());
+    })
+    .then((data) => {
+        global_panelMaster = data.array;
+    });
+
 
 });

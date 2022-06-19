@@ -1,6 +1,7 @@
 /**
  * 制作者：bot810
  * 制作日：2020/10/09
+ * 更新日：2022/05/07
  * パネル関連のクラスを定義
  */
 
@@ -21,7 +22,7 @@ class PanelInfo {
         this.panelName = name;
         this.pos = pos;
         this.size = size; // 符号なし。5：小(1/8サイズ)、4：中(1/4サイズ(横))、3：中(1/4サイズ(縦))、2：大(1/2サイズ)
-        this.iamgeLink = img;
+        this.imageLink = img;
         this.toolLink = tool;
 
         // 位置，サイズ，クラス名のパラメータ設定
@@ -51,6 +52,15 @@ class PanelInfo {
     // 連想配列の形式(要素は順不同){"panel_name" : <String>, "anchor_num" : <int>, "panel_size" : <int>}
     data(){
         return {panel_name:this.panelName, anchor_num:this.pos, panel_size:this.size};
+    }
+
+    // コンテンツ情報更新用
+    setContent(content){
+        //console.log(content);
+        this.panelName = content.panel_name;
+        this.toolLink = content.content_link;
+        this.imageLink = content.content_image;
+        //console.log(content.content_image);
     }
 
 }

@@ -7,14 +7,13 @@
     <title>Panel Customize</title>
 
     <!-- Custom styles for this template -->
-    <link href="/panel_customize/css/dashboard.css" rel="stylesheet">
+    <link href="/common/css/dashboard.css" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <!-- Lightbox2 CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css" rel="stylesheet">
     <!-- cssの読み込み -->
-    <!-- <link href="./css/masonry.css" rel="stylesheet"> -->
-    <link href="/panel_customize/css/grid_layout.css" rel="stylesheet">
+    <link href="/common/css/grid_layout.css" rel="stylesheet">
     <link href="/panel_customize/css/customize.css" rel="stylesheet">
 </head>
 
@@ -82,8 +81,8 @@
 
                         <ul>
                             <li><a id="panel_tab" href="/panel_customize/panel_customize.php">Panel</a></li>
-                            <li><a href="/panel_customize/panel_customize.php">Contents</a></li>
-                            <li><a href="/panel_customize/panel_customize.php">Preset</a></li>
+                            <li><a id="contents_tab" href="/panel_customize/panel_customize.php">Contents</a></li>
+                            <li><a id="preset_tab" href="/panel_customize/panel_customize.php">Preset</a></li>
                         </ul>
 
                         <div>
@@ -121,6 +120,9 @@
                             <!-- contentsタブ -->
                             <div id="contents">
                                 <h7>Contents</h7>
+                                <div>
+                                    <!-- ここにコンテンツ選択の諸々が表示される -->
+                                </div>
                             </div>
 
                             <!-- presetタブ -->
@@ -201,16 +203,17 @@
     <!-- script -->
     <script src="/common/js/get_presetdata.js"></script>
     <script src="/panel_customize/js/global_variables.js"></script>
-    <script src="/panel_customize/js/operate_paneldata.js"></script>
-    <script src="/panel_customize/js/panel_class.js"></script>
-    <script src="/panel_customize/js/div_control.js"></script>
-    <script src="/panel_customize/js/panel_dataset_init_customize.js"></script>
+    <script src="/common/js/operate_paneldata.js"></script>
+    <script src="/common/js/panel_class.js"></script>
+    <script src="/common/js/div_control.js"></script>
+    <script src="/common/js/panel_dataset_init.js"></script>
     <script src="/panel_customize/js/customize.js"></script>
     <script src="/panel_customize/js/customize_preset.js"></script>
+    <script src="/panel_customize/js/customize_contents.js"></script>
     <script src="/panel_customize/js/customize_panel.js"></script>
-    <script src="/panel_customize/js/settings.js"></script>
+    <script src="/common/js/settings.js"></script>
     <script src="/panel_customize/js/btn_event.js"></script>
-    <script src="/panel_customize/js/event_onload.js"></script>
+    <script src="/panel_customize/js/event_onload_customize.js"></script>
     <!-- サイドバー用のJavaScript -->
     <script src="/common/js/sidebar.js"></script>
 </body>
