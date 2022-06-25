@@ -1,7 +1,7 @@
 /**
  * 制作者：bot810
  * 作成日：2022/06/04
- * 更新日：
+ * 更新日：2022/06/25
  * div要素の追加，変更をする関数を定義．
  */
 
@@ -14,7 +14,7 @@ let text;
 function containerAppend(info) {
 
     // フラグによってコンテンツリンクの有無を変更
-    if(this == true){ // フラグがTrue
+    if(this == true){ // フラグがTrue(home画面)
         text = `
         <div class="${info.className}" style="grid-area: ${info.gridSize};">
             <a href="${info.toolLink}">
@@ -22,9 +22,9 @@ function containerAppend(info) {
             </a>
         </div>
         `;
-    }else{ // フラグがfalse
+    }else{ // フラグがfalse(customize画面)
         text = `
-        <div class="${info.className}" style="grid-area: ${info.gridSize};">
+        <div class="${info.className}" style="grid-area: ${info.gridSize}; z-index: 5;">
             <img src="${info.imageLink}" alt="" class="panelImg">
         </div>
         `;
