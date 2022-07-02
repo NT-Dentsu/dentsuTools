@@ -36,10 +36,10 @@ cancel.click(function () {
     .then((pInfo) => {
         console.log(pInfo); // pInfoにデータベースからの情報が入る
         // パネルレイアウトをデータベースから読み込んだものにする
-        panelInfo = pInfo;
+        global_panelInfo = pInfo;
         // 変更を反映させる
         containerEnpty();
-        panelInfo.forEach(containerAppend);
+        global_panelInfo.forEach(containerAppend);
 
         // customize_panel.jsのpdataの値を更新
         pdata = pInfo;
