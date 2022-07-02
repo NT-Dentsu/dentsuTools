@@ -1,0 +1,11 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 機能追加
+    about: made by config.yml
+    url: https://github.com/NT-Dentsu/dentsuTools/issues/new?template=feature.md&title=[プロジェクト名]issue名&labels=enhancement
+  - name: リファクタリング
+    about: made by config.yml
+    url: https://github.com/NT-Dentsu/dentsuTools/issues/new?template=refactoring.md&title=[プロジェクト名]issue名&labels=refactoring
+  - name: バグ報告
+    about: made by config.yml
+    url: https://github.com/NT-Dentsu/dentsuTools/issues/new?template=bug_report.md&title=[プロジェクト名]issue名&labels=bug
