@@ -28,12 +28,8 @@ function pulldown(panelName) {
     return text;
 }
 
-
-// contentsタブクリック時の動作
-// クリックイベント設定
-$("#contents_tab").click(function () {
-    // 動作確認
-    console.log("contents Tab click");
+// コンテンツタブの中身を変更する処理
+function setContents() {
 
     // 中身を初期化
     $("#contents div").empty();
@@ -71,7 +67,16 @@ $("#contents_tab").click(function () {
         panelNum++;
     });
 
+}
 
+// contentsタブクリック時の動作
+// クリックイベント設定
+$("#contents_tab").click(function () {
+    // 動作確認
+    console.log("contents Tab click");
+
+    // コンテンツタブの中身を設定
+    setContents();
 });
 
 
