@@ -43,6 +43,9 @@ cancel.click(function () {
 
         // customize_panel.jsのpdataの値を更新
         pdata = pInfo;
+
+        // コンテンツタブの中身を再設定
+        setContents();
     });
 
 });
