@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="/user_icon/css/user_icon.css">
     <link rel="stylesheet" href="/profile_form/css/profile.css">
     <!-- Custom styles for this template -->
-    <link rel="stylesheet" href="/css/dashboard.css" >
+    <link rel="stylesheet" href="/common/css/dashboard.css" >
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     inegrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -86,7 +86,7 @@
         integrity="sha512-7x3zila4t2qNycrtZ31HO0NnJr8kg2VI67YLoRSyi9hGhRN66FHYWr7Axa9Y1J9tGYHVBPqIjSE1ogHrJTz51g=="
         crossorigin="anonymous"></script>
     <!-- script -->
-    <script src="/js/settings.js"></script>
+    <script src="/common/js/settings.js"></script>
     <script src="/common/js/sidebar.js"></script>
     <script src="/profile_form/js/profile_init.js"></script>
     <script src="/profile_form/js/profile_change.js"></script>
